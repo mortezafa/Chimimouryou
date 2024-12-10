@@ -10,6 +10,7 @@ import (
 	"net/http"
 	"net/url"
 	"os/exec"
+	"strings"
 
 	"github.com/spf13/cobra"
 )
@@ -26,7 +27,20 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("searching... One moment please.")
-		parseJsonData()
+
+		if len(args) < 0 {
+			panic("You didnt specify an Anime Name!")
+		}
+		
+		animeId, err := searchAnime(args)
+		if err != nil {
+			fmt.Println(err)
+		}
+		episodeId, err := getAnimeInfo(animeId)
+		if err != nil {
+			fmt.Println(err)
+		}	
+		parseJsonData(episodeId)
 	},
 }
 
@@ -36,12 +50,25 @@ func init() {
 
 // First we need to get the anime info
 
-type AnimeInfo struct {
-	ID            string `json:"id"`
-	title         string `json:"title"`
-	url           string `json:"url"`
-	image         string `json:"image"`
-	totalEpisodes int32  `json:"totalEpisodes"`
+type AnimeSearchQuery struct {
+	CurrentPage int  `json:"current_page"`
+	HasNextPage bool `json:"hasNextPage"`
+	Results     []struct {
+		ID string `json:"id"`
+		Title string `json:"title"`
+		URL   string `json:"url"`
+		Image string `json:"image"`
+		ReleaseDate string `json:"releaseDate"`
+		SubOrDub string `json:"subOrDub"`
+	}
+}
+
+type AnimeInfo struct{
+	Episodes []struct {
+		ID string `json:"id"`
+		Number int `json:"number"`
+		Url string `json:"url"`
+	}
 }
 
 type AnimeStreams struct {
@@ -52,8 +79,8 @@ type AnimeStreams struct {
 	} `json:"sources"`
 }
 
-func parseJsonData() {
-	jsonBody, err := fetchJsonBody()
+func parseJsonData(episodeId string) {
+	jsonBody, err := fetchJsonBody(episodeId)
 	if err != nil {
 		fmt.Println(err)
 		return
@@ -90,8 +117,8 @@ func parseJsonData() {
 
 }
 
-func fetchJsonBody() ([]byte, error) {
-	baseURL := "http://localhost:3000/anime/gogoanime/watch/tokyo-ghoul-episode-1"
+func fetchJsonBody(epidsodeId string) ([]byte, error) {
+	baseURL := fmt.Sprintf("http://localhost:3000/anime/gogoanime/watch/%s", epidsodeId)
 
 	params := url.Values{}
 	params.Add("server", "vidstreaming")
@@ -113,4 +140,69 @@ func fetchJsonBody() ([]byte, error) {
 		fmt.Errorf("Failed to read the response body: %v", err)
 	}
 	return body, nil
+}
+
+func searchAnime(name []string) (string, error) {
+	joinedUrl := strings.Join(name, "%20")
+	fmt.Println(joinedUrl)
+
+	fullUrl := fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", joinedUrl)
+	resp, err := http.Get(fullUrl)
+	if err != nil {
+		fmt.Errorf("Failed to make the request: %v", err)
+		return "", nil
+	}
+	defer resp.Body.Close()
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Errorf("Failed to read the response body: %v", err)
+		return "", nil
+	}
+	
+	var animeSearchQuery AnimeSearchQuery
+	err = json.Unmarshal(body, &animeSearchQuery)
+	if err != nil {
+		fmt.Errorf("Failed to parse the response body: %v", err)
+		return "", nil
+	}
+	
+	idList := []string{}
+	
+	for _, source := range animeSearchQuery.Results {
+		// TODO: Need to handle how im going to store these results. come time to create the UI...
+		idList = append(idList, source.ID)
+	}
+	fmt.Println("HELLO???")
+	fmt.Println(strings.Join(idList, "\n"))
+
+	return idList[0], nil
+
+}
+
+func getAnimeInfo(animeID string) (string, error)  {
+	url := fmt.Sprintf("http://localhost:3000/anime/gogoanime/info/%s", animeID)
+	resp, err := http.Get(url)
+	if err != nil {
+		fmt.Errorf("Failed to make the request: %v", err)
+		return "", nil
+	}
+	defer resp.Body.Close()
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Errorf("Failed to read the response body: %v", err)
+		return "", nil
+	}
+	var animeInfo AnimeInfo
+	err = json.Unmarshal(body, &animeInfo)
+	if err != nil {
+		fmt.Errorf("Failed to parse the response body: %v", err)
+		return "", nil
+	}
+	
+	for _, source := range animeInfo.Episodes {
+		return source.ID, nil
+	}
+	
+	return "", nil
+	
 }
