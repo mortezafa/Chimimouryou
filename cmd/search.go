@@ -143,10 +143,15 @@ func fetchJsonBody(epidsodeId string) ([]byte, error) {
 }
 
 func searchAnime(name []string) (string, error) {
-	joinedUrl := strings.Join(name, "%20")
-	fmt.Println(joinedUrl)
-
-	fullUrl := fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", joinedUrl)
+	var fullUrl string
+	if len(name) == 1 {
+		fullUrl = fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", name[0])
+	} else {
+		joinedUrl := strings.Join(name, "%20")
+		fmt.Println(joinedUrl)
+		fullUrl = fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", joinedUrl)
+	}
+	
 	resp, err := http.Get(fullUrl)
 	if err != nil {
 		fmt.Errorf("Failed to make the request: %v", err)
