@@ -1,11 +1,7 @@
-package main
+t package main
 
-import (
-	"fmt"
-)
+import "Chimimouryou/cmd"
 
 func main() {
-
-	fmt.Println("")
-
+	cmd.Execute()
 }
