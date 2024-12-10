@@ -4,6 +4,7 @@ Copyright © 2024 NAME HERE <EMAIL ADDRESS>
 package cmd
 
 import (
+	"Chimimouryou/JsonsStrcuts"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -50,43 +51,16 @@ func init() {
 
 // First we need to get the anime info
 
-type AnimeSearchQuery struct {
-	CurrentPage int  `json:"current_page"`
-	HasNextPage bool `json:"hasNextPage"`
-	Results     []struct {
-		ID string `json:"id"`
-		Title string `json:"title"`
-		URL   string `json:"url"`
-		Image string `json:"image"`
-		ReleaseDate string `json:"releaseDate"`
-		SubOrDub string `json:"subOrDub"`
-	}
-}
 
-type AnimeInfo struct{
-	Episodes []struct {
-		ID string `json:"id"`
-		Number int `json:"number"`
-		Url string `json:"url"`
-	}
-}
-
-type AnimeStreams struct {
-	Sources []struct {
-		Url     string `json:"url"`
-		IsM3U8  bool   `json:"isM3U8"`
-		Quality string `json:"quality"`
-	} `json:"sources"`
-}
 
 func parseJsonData(episodeId string) {
-	jsonBody, err := fetchJsonBody(episodeId)
+	jsonBody, err := fetchVideoFile(episodeId)
 	if err != nil {
 		fmt.Println(err)
 		return
 	}
 
-	var animeStreams AnimeStreams
+	var animeStreams JsonsStrcuts.AnimeStreams
 	err = json.Unmarshal(jsonBody, &animeStreams)
 	if err != nil {
 		fmt.Println(err)
@@ -117,15 +91,10 @@ func parseJsonData(episodeId string) {
 
 }
 
-func fetchJsonBody(epidsodeId string) ([]byte, error) {
-	baseURL := fmt.Sprintf("http://localhost:3000/anime/gogoanime/watch/%s", epidsodeId)
 
-	params := url.Values{}
-	params.Add("server", "vidstreaming")
+func fetchJsonData[T any](fullUrl string, jsonObj T) ([]byte, error) {
 
-	fullURL := fmt.Sprintf("%s?%s", baseURL, params.Encode())
-
-	resp, err := http.Get(fullURL)
+	resp, err := http.Get(fullUrl)
 	if err != nil {
 		fmt.Errorf("Failed to make the request: %v", err)
 	}
@@ -138,8 +107,26 @@ func fetchJsonBody(epidsodeId string) ([]byte, error) {
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Errorf("Failed to read the response body: %v", err)
-	}
+	}	
 	return body, nil
+}
+
+func fetchVideoFile (epidsodeId string) ([]byte, error) {
+	baseURL := fmt.Sprintf("http://localhost:3000/anime/gogoanime/watch/%s", epidsodeId)
+
+	params := url.Values{}
+	params.Add("server", "vidstreaming")
+
+	fullURL := fmt.Sprintf("%s?%s", baseURL, params.Encode())
+	
+	jsonData, err := fetchJsonData(fullURL)
+	if err != nil {
+		fmt.Errorf("Failed to fetch video file: %v", err)
+		return nil, err
+	}
+	
+	return jsonData, nil
+
 }
 
 func searchAnime(name []string) (string, error) {
@@ -152,20 +139,10 @@ func searchAnime(name []string) (string, error) {
 		fullUrl = fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", joinedUrl)
 	}
 	
-	resp, err := http.Get(fullUrl)
-	if err != nil {
-		fmt.Errorf("Failed to make the request: %v", err)
-		return "", nil
-	}
-	defer resp.Body.Close()
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Errorf("Failed to read the response body: %v", err)
-		return "", nil
-	}
+	resp, err := fetchJsonData(fullUrl)
 	
-	var animeSearchQuery AnimeSearchQuery
-	err = json.Unmarshal(body, &animeSearchQuery)
+	var animeSearchQuery JsonsStrcuts.AnimeSearchQuery
+	err = json.Unmarshal(resp, &animeSearchQuery)
 	if err != nil {
 		fmt.Errorf("Failed to parse the response body: %v", err)
 		return "", nil
@@ -186,19 +163,11 @@ func searchAnime(name []string) (string, error) {
 
 func getAnimeInfo(animeID string) (string, error)  {
 	url := fmt.Sprintf("http://localhost:3000/anime/gogoanime/info/%s", animeID)
-	resp, err := http.Get(url)
-	if err != nil {
-		fmt.Errorf("Failed to make the request: %v", err)
-		return "", nil
-	}
-	defer resp.Body.Close()
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Errorf("Failed to read the response body: %v", err)
-		return "", nil
-	}
-	var animeInfo AnimeInfo
-	err = json.Unmarshal(body, &animeInfo)
+	
+	resp, err := fetchJsonData(url)
+	
+	var animeInfo JsonsStrcuts.AnimeInfo
+	err = json.Unmarshal(resp, &animeInfo)
 	if err != nil {
 		fmt.Errorf("Failed to parse the response body: %v", err)
 		return "", nil
