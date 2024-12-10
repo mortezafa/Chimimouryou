@@ -1,4 +1,4 @@
-t package main
+package main
 
 import "Chimimouryou/cmd"
 
