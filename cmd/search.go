@@ -5,6 +5,7 @@ package cmd
 
 import (
 	"Chimimouryou/JsonsStrcuts"
+	"Chimimouryou/ui"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -20,28 +21,26 @@ import (
 var searchCmd = &cobra.Command{
 	Use:   "search",
 	Short: "A brief description of your command",
-	Long: `A longer description that spans multiple lines and likely contains examples
-and usage of using your command. For example:
-
-Cobra is a CLI library for Go that empowers applications.
-This application is a tool to generate the needed files
-to quickly create a Cobra application.`,
+	Long: `...`,
 	Run: func(cmd *cobra.Command, args []string) {
 		fmt.Println("searching... One moment please.")
 
-		if len(args) < 0 {
-			panic("You didnt specify an Anime Name!")
-		}
+		//if len(args) < 0 {
+		//	panic("You didnt specify an Anime Name!")
+		//}
+		//
+		//animeId, err := searchAnime(args)
+		//if err != nil {
+		//	fmt.Println(err)
+		//}
+		//episodeId, err := getAnimeInfo(animeId)
+		//if err != nil {
+		//	fmt.Println(err)
+		//}	
+		//fmt.Println(episodeId)
+		//parseJsonData(episodeId)
 		
-		animeId, err := searchAnime(args)
-		if err != nil {
-			fmt.Println(err)
-		}
-		episodeId, err := getAnimeInfo(animeId)
-		if err != nil {
-			fmt.Println(err)
-		}	
-		parseJsonData(episodeId)
+		ui.ShowSearchPage()
 	},
 }
 
@@ -92,7 +91,7 @@ func parseJsonData(episodeId string) {
 }
 
 
-func fetchJsonData[T any](fullUrl string, jsonObj T) ([]byte, error) {
+func fetchJsonData(fullUrl string) ([]byte, error) {
 
 	resp, err := http.Get(fullUrl)
 	if err != nil {
