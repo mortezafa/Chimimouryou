@@ -32,14 +32,23 @@ func searchMenu(app *tview.Application)  {
 		SetDirection(tview.FlexColumnCSS).
 		AddItem(titleText, 0, 1, true)
 	
+	
+	episodeList := tview.NewList().
+		AddItem("test 1", "s", 'a', nil).
+		AddItem("test 1", "d", 'b', nil).
+		AddItem("test 1", "f", 'c', nil).
+		AddItem("test 1", "g", 'd', nil)
+	
 	episodesFlex := tview.NewFlex().
 		AddItem(tview.NewBox().SetBorder(true).SetBorderColor(tcell.ColorCadetBlue).SetTitle("Episodes"), 0, 2, false)
+			
 	
 	
 	episodeSection := tview.NewFlex().
 		SetDirection(tview.FlexRow).
 		AddItem(titleFlex, 11, 1, true).
-		AddItem(episodesFlex, 0, 1, false)
+		AddItem(episodesFlex, 0, 2, false).
+		AddItem(episodeList, 0, 3, true)
 	
 	animeBox := tview.NewFlex().
 		AddItem(tview.NewBox().SetBorder(true).SetBorderColor(tcell.ColorCadetBlue).SetTitle("Anime"), 0, 1, false)
