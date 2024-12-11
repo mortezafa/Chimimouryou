@@ -12,8 +12,21 @@ func ShowSearchPage() {
 func searchMenu(app *tview.Application)  {
 	
 	titleText := tview.NewTextView().
-		SetText("CHIMIMOURYOU").
-		SetTextColor(tcell.ColorYellow)
+		SetText(`                                                                                                                        
+ ▒▒▒▒▒▒▒░    ▒▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▒▒▒▒▒▒░   ░▒▒▒▒▒▒▒▒▒         ░▒▒▒▒▒░   ▒▒     ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒         ░▒▒▒▒▒▒▒▒▒ 
+ ▒▒▒░     █        ▒▒░       ░░░░░▒░     █      ░▒▒▒▒ ████████░▒▒▒▒▒  █ ░  ███  ▒▒▒▒▒▒▒▒░░░▒▒▒▒▒▒▒▒▒ ███████▒░▒▒▒▒▒▒▒▒▒ 
+ ▒▒▒░▒████████████ ▒▒░███ ██ ░ ░ ░▒░░███████████░▒▒▒░           ░▒▒▒ ██ ░ █▓ ██ ▒▒▒▒▒▒▒░   ░░░░▒▒▒▒░           ▒▒▒▒▒▒▒▒ 
+ ▒▒▒░    █         ▒▒     █    █ ░▒░     █       ▒▒▒  ▓████████  ░▒▒ ██ ▒    ██ ░▒▒▒▒▒▒░ █  ░█ ▒▒▒░  █████████  ▒▒▒▒▒▒▒ 
+ ▒▒▒▒▒░  █ █████   ▒  ▓█████████    ▒██████████░  ▒▒ ██        █▒ ▒▒ ██ ▒▒▒▒ ██ ░▒▒▒▒▒▒░ █████ ▒▒▒░██▒       ██ ▒▒▒▒▒▒▒ 
+ ▒▒▒▒▒░ ██▒     ██ ▒ ██  █    █████     █      ██  ▒    ░░▒▒░  █▒ ▒▒ ██ ▒▒░  ██ ▒▒▒▒     █    ░▒▒▒░   ░░▒▒▒░  █ ▒▒▒▒▒▒▒ 
+ ▒▒▒▒▒░         ██ ▒ ██ ██    █░    ▒▒░ █       ██ ▒▒▒▒▒░     ██  ▒▒        ██  ▒▒▒▒ ███████   ░▒▒▒▒▒▒░░     ██ ▒▒▒▒▒▒▒ 
+ ▒▒▒▒▒▒ █████████  ▒  ██░   ███  ▒▒▒▒▒░  ████████  ▒▒▒░  ░████   ░▒▒▒▒▒ ████▓  ▒▒▒▒▒ █████  ██░░▒▒▒▒▒   █████   ▒▒▒▒▒▒▒ 
+ ▒▒▒▒▒▒           ▒▒░    ░▒     ▒▒▒▒▒▒▒░          ▒▒▒▒░░██     ░▒▒▒▒▒▒▒       ▒▒▒▒▒▒           ░▒▒▒▒▒ ██▓     ░▒▒▒▒▒▒▒▒ 
+ ▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░    ░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒    ░▒▒▒▒▒▒▒▒▒▒▒▒▒ 
+                                                                                                                        `).
+		SetWrap(false).
+		SetTextAlign(tview.AlignCenter).
+		SetTextColor(tcell.ColorCadetBlue)
 	
 	titleFlex := tview.NewFlex().
 		SetDirection(tview.FlexColumnCSS).
@@ -24,8 +37,8 @@ func searchMenu(app *tview.Application)  {
 	
 	episodeSection := tview.NewFlex().
 		SetDirection(tview.FlexRow).
-		AddItem(titleFlex, 0, 1, true).
-		AddItem(episodesFlex, 0, 3, false)
+		AddItem(titleFlex, 11, 1, true).
+		AddItem(episodesFlex, 0, 1, false)
 	
 	animeBox := tview.NewFlex().
 		AddItem(tview.NewBox().SetBorder(true).SetTitle("Anime"), 0, 1, false)
