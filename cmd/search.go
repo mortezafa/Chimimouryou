@@ -8,13 +8,11 @@ import (
 	"Chimimouryou/ui/bubbleTeaUi"
 	"encoding/json"
 	"fmt"
+	"github.com/spf13/cobra"
 	"io"
 	"net/http"
 	"net/url"
 	"os/exec"
-	"strings"
-
-	"github.com/spf13/cobra"
 )
 
 // searchCmd represents the search command
@@ -23,24 +21,18 @@ var searchCmd = &cobra.Command{
 	Short: "A brief description of your command",
 	Long: `...`,
 	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("searching... One moment please.")
+		animeName, err:= bubbleTeaUi.RunTUI()
 
-		//if len(args) < 0 {
-		//	panic("You didnt specify an Anime Name!")
-		//}
-		//
-		//animeId, err := searchAnime(args)
-		//if err != nil {
-		//	fmt.Println(err)
-		//}
-		//episodeId, err := getAnimeInfo(animeId)
-		//if err != nil {
-		//	fmt.Println(err)
-		//}	
-		//fmt.Println(episodeId)
-		//parseJsonData(episodeId)
+		animeId, err := searchAnime(animeName)
+		if err != nil {
+			fmt.Println(err)
+		}
+		episodeId, err := getAnimeInfo(animeId)
+		if err != nil {
+			fmt.Println(err)
+		}	
+		parseJsonData(episodeId)
 		
-		bubbleTeaUi.Main()
 	},
 }
 
@@ -114,10 +106,11 @@ func fetchVideoFile (epidsodeId string) ([]byte, error) {
 	baseURL := fmt.Sprintf("http://localhost:3000/anime/gogoanime/watch/%s", epidsodeId)
 
 	params := url.Values{}
-	params.Add("server", "vidstreaming")
+	params.Add("server", "streamsb")
 
 	fullURL := fmt.Sprintf("%s?%s", baseURL, params.Encode())
-	
+	fmt.Println(fullURL)
+
 	jsonData, err := fetchJsonData(fullURL)
 	if err != nil {
 		fmt.Errorf("Failed to fetch video file: %v", err)
@@ -128,15 +121,9 @@ func fetchVideoFile (epidsodeId string) ([]byte, error) {
 
 }
 
-func searchAnime(name []string) (string, error) {
+func searchAnime(name string) (string, error) {
 	var fullUrl string
-	if len(name) == 1 {
-		fullUrl = fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", name[0])
-	} else {
-		joinedUrl := strings.Join(name, "%20")
-		fmt.Println(joinedUrl)
-		fullUrl = fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", joinedUrl)
-	}
+	fullUrl = fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", name)
 	
 	resp, err := fetchJsonData(fullUrl)
 	
@@ -153,8 +140,6 @@ func searchAnime(name []string) (string, error) {
 		// TODO: Need to handle how im going to store these results. come time to create the UI...
 		idList = append(idList, source.ID)
 	}
-	fmt.Println("HELLO???")
-	fmt.Println(strings.Join(idList, "\n"))
 
 	return idList[0], nil
 

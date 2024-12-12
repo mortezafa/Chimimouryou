@@ -34,6 +34,7 @@ func New(title string) *model {
 	styles := DefaultStyles()
 	searchField := textinput.New()
 	searchField.Placeholder = "Ex: Chainsaw Man"
+	searchField.Focus()
 	return &model{title: title, searchField: searchField, styles: styles}
 	
 }
@@ -45,6 +46,7 @@ func (m model) Init() tea.Cmd {
 
 // Function that re-renders our view with new state
 func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd)  {
+	var cmd tea.Cmd
 	switch msg := msg.(type) {
 	case tea.WindowSizeMsg:
 		m.width = msg.Width
@@ -53,9 +55,12 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd)  {
 		switch msg.String() {
 		case "ctrl+c":
 			return m, tea.Quit
+		case "enter":
+			return m, tea.Quit
 		}
 	}
-	return m, nil
+	m.searchField, cmd = m.searchField.Update(msg)
+	return m, cmd
 }
 
 
@@ -80,16 +85,27 @@ func (m model)View() string {
 	
 }
 
-func Main() {
-	title := "Type in the Anime you would like to search for..."	
-	
+func RunTUI() (string, error) {
+
+	title := "Type in the Anime you would like to search for..."
+
 	m := New(title)
-	
-	
-	
 	p:= tea.NewProgram(m, tea.WithAltScreen())
-	if _, err := p.Run(); err != nil {
+	
+	finalModel, err := p.Run()
+	if err != nil {
 		log.Fatal(err)
 	}
+	output := finalModel.(model)
+	return output.searchField.Value(), nil
+	
+}
+
+func Main() {
+	_, err := RunTUI()	
+	if err != nil {
+		log.Fatal(err)	
+	}
+	
 }
 
