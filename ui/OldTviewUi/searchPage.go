@@ -1,4 +1,4 @@
-package ui
+package OldTviewUi
 
 import (
 	"github.com/gdamore/tcell/v2"
@@ -39,9 +39,16 @@ func searchMenu(app *tview.Application)  {
 		AddItem("test 1", "", '◆', nil).
 		AddItem("test 1", "", '◆', nil).
 		SetShortcutColor(tcell.ColorPurple)
-	
-	episodeFrame := tview.NewFrame(episodeList).
-		SetBorder(true).SetBorderColor(tcell.ColorCadetBlue)
+
+	episodeFrame := tview.NewFlex().
+		SetDirection(tview.FlexRow).
+		AddItem(nil, 0, 1, false). // Empty space above the list
+		AddItem(tview.NewBox().
+			SetBorder(true).
+			SetBorderColor(tcell.ColorCadetBlue).
+			SetTitle("Episodes"), 0, 1, false). // Box for border and title
+		AddItem(episodeList, 0, 4, true) // Embed the list inside the box
+
 		
 	episodeSection := tview.NewFlex().
 		SetDirection(tview.FlexRow).

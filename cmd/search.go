@@ -5,7 +5,7 @@ package cmd
 
 import (
 	"Chimimouryou/JsonsStrcuts"
-	"Chimimouryou/ui"
+	"Chimimouryou/ui/bubbleTeaUi"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -40,7 +40,7 @@ var searchCmd = &cobra.Command{
 		//fmt.Println(episodeId)
 		//parseJsonData(episodeId)
 		
-		ui.ShowSearchPage()
+		bubbleTeaUi.Main()
 	},
 }
 
