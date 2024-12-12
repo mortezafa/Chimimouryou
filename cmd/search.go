@@ -21,18 +21,18 @@ var searchCmd = &cobra.Command{
 	Short: "A brief description of your command",
 	Long: `...`,
 	Run: func(cmd *cobra.Command, args []string) {
-		animeName, err:= bubbleTeaUi.RunTUI()
+		bubbleTeaUi.AnimeListMain()
 
-		animeId, err := searchAnime(animeName)
-		if err != nil {
-			fmt.Println(err)
-		}
-		episodeId, err := getAnimeInfo(animeId)
-		if err != nil {
-			fmt.Println(err)
-		}	
-		parseJsonData(episodeId)
-		
+		//animeId, err := searchAnime(animeName)
+		//if err != nil {
+		//	fmt.Println(err)
+		//}
+		//episodeId, err := getAnimeInfo(animeId)
+		//if err != nil {
+		//	fmt.Println(err)
+		//}	
+		//parseJsonData(episodeId)
+		//
 	},
 }
 
