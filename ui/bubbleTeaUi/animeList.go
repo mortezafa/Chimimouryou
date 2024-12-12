@@ -10,12 +10,19 @@ import (
 var docStyle = lipgloss.NewStyle().Margin(1, 2)
 
 type AnimeListStyles struct {
-	
+	listText	lipgloss.Style	
+}
+
+func aniStyles() *AnimeListStyles {
+	s := new(AnimeListStyles)
+	s.listText = lipgloss.NewStyle().Foreground(lipgloss.Color("240"))
+	return s
 	
 }
 
 type animeModel struct {
-	animeList list.Model		
+	animeList list.Model
+	styles    *AnimeListStyles
 }
 
 type animes struct {
@@ -49,7 +56,7 @@ func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 
 func (m animeModel) View() string {
-	return docStyle.Render(m.animeList.View())
+	return m.styles.listText.Render(docStyle.Render(m.animeList.View()))
 	
 }
 
@@ -60,7 +67,12 @@ func AnimeListMain() {
 		animes{title: "Tokyo Ghoul Root A"},
 	}
 	
-	m := animeModel{animeList: list.New(items, list.NewDefaultDelegate(), 0, 0)}
+	styles := aniStyles()
+	l :=  list.New(items, list.NewDefaultDelegate(), 0, 0)
+	l.SetShowStatusBar(false)
+	
+	
+	m := animeModel{animeList: l, styles: styles}
 	m.animeList.Title = "Search results for Tokyo Ghoul"
 	p := tea.NewProgram(m, tea.WithAltScreen())
 	_, err := p.Run()
