@@ -32,9 +32,11 @@ type model struct {
 	searchField textinput.Model 
 	styles *Styles
 	currentPage	page
+	resmodel resultsModel
 }
 
 type resultsModel struct{
+	
 	
 }
 
@@ -74,7 +76,12 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd)  {
 			log.Printf("searchValue: %s", m.output)
 			m.currentPage = resultsPage
 			return m, nil
+		case "left":
+			m.searchField.SetValue("")
+			m.currentPage = searchPage;
+			return m, nil
 		}
+		
 	}	
 	m.searchField, cmd = m.searchField.Update(msg)
 	return m, cmd
