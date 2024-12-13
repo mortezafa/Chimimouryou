@@ -9,20 +9,9 @@ import (
 
 var docStyle = lipgloss.NewStyle().Margin(1, 2)
 
-type AnimeListStyles struct {
-	listText	lipgloss.Style	
-}
-
-func aniStyles() *AnimeListStyles {
-	s := new(AnimeListStyles)
-	s.listText = lipgloss.NewStyle().Foreground(lipgloss.Color("240"))
-	return s
-	
-}
 
 type animeModel struct {
 	animeList list.Model
-	styles    *AnimeListStyles
 }
 
 type animes struct {
@@ -56,7 +45,7 @@ func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 
 func (m animeModel) View() string {
-	return m.styles.listText.Render(docStyle.Render(m.animeList.View()))
+	return docStyle.Render(m.animeList.View())
 	
 }
 
@@ -67,18 +56,33 @@ func AnimeListMain() {
 		animes{title: "Tokyo Ghoul Root A"},
 	}
 	
-	styles := aniStyles()
-	l :=  list.New(items, list.NewDefaultDelegate(), 0, 0)
-	l.SetShowStatusBar(false)
+	d := list.NewDefaultDelegate()
+	d.ShowDescription = false
+	d.Styles.SelectedTitle = lipgloss.NewStyle().Foreground(lipgloss.Color("32"))
+	//d.Styles.NormalTitle = lipgloss.NewStyle().BorderForeground(lipgloss.Color("192"))
+	l := list.New(items, d, 0,0)
+	
+	l.SetShowStatusBar(false)	
 	
 	
-	m := animeModel{animeList: l, styles: styles}
+	m := animeModel{animeList: l}
+	titleColor := lipgloss.NewStyle().Foreground(lipgloss.Color("32"))
 	m.animeList.Title = "Search results for Tokyo Ghoul"
+	titleColor.Render(m.animeList.View())
+	
+	
+	
+	f, err1 := tea.LogToFile("debug.log", "debug")
+	if err1!= nil {
+		log.Fatal("err: %w", err1)
+	}
+	defer f.Close()
+	
 	p := tea.NewProgram(m, tea.WithAltScreen())
 	_, err := p.Run()
 	
 	if err != nil {
-		log.Fatal(err)
+	log.Fatal(err)
 	}
 	
 }

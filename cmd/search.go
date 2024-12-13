@@ -21,7 +21,7 @@ var searchCmd = &cobra.Command{
 	Short: "A brief description of your command",
 	Long: `...`,
 	Run: func(cmd *cobra.Command, args []string) {
-		bubbleTeaUi.Main()
+		bubbleTeaUi.AnimeListMain()
 
 		//animeId, err := searchAnime(animeName)
 		//if err != nil {
