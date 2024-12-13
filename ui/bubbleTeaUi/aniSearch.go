@@ -22,10 +22,13 @@ func DefaultStyles() *Styles {
 	return s
 }
 
+type textInputMsg string
+
 type model struct {
 	title string
 	width int
 	height int
+	output	string
 	searchField textinput.Model 
 	styles *Styles
 }
@@ -56,13 +59,14 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd)  {
 		case "ctrl+c":
 			return m, tea.Quit
 		case "enter":
+			m.output = m.searchField.Value()
+			log.Printf("searchValue: %s", m.output)
 			return m, tea.Quit
 		}
-	}
+	}	
 	m.searchField, cmd = m.searchField.Update(msg)
 	return m, cmd
 }
-
 
 // Function that renders our app
 func (m model)View() string {
@@ -79,33 +83,20 @@ func (m model)View() string {
 			m.styles.titleText.Render(m.title),
 			m.styles.InputField.Render(m.searchField.View())),
 		)
-	
-	
-	
-	
-}
-
-func RunTUI() (string, error) {
-
-	title := "Type in the Anime you would like to search for..."
-
-	m := New(title)
-	p:= tea.NewProgram(m, tea.WithAltScreen())
-	
-	finalModel, err := p.Run()
-	if err != nil {
-		log.Fatal(err)
-	}
-	output := finalModel.(model)
-	return output.searchField.Value(), nil
-	
 }
 
 func Main() {
-	_, err := RunTUI()	
-	if err != nil {
-		log.Fatal(err)	
-	}
-	
-}
+	m := New("Enter the anime you would like to search...")
 
+	f, err1 := tea.LogToFile("debug.log", "debug")
+	if err1!= nil {
+		log.Fatal("err: %w", err1)
+	}
+	defer f.Close()
+	
+	p := tea.NewProgram(m, tea.WithAltScreen())
+	_, err := p.Run()
+	if err != nil {
+		log.Fatal(err)
+	}
+}
