@@ -1,6 +1,7 @@
 package bubbleTeaUi
 
 import (
+	"fmt"
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
@@ -22,7 +23,6 @@ func DefaultStyles() *Styles {
 	return s
 }
 
-type textInputMsg string
 
 type model struct {
 	title string
@@ -31,14 +31,25 @@ type model struct {
 	output	string
 	searchField textinput.Model 
 	styles *Styles
+	currentPage	page
 }
+
+type resultsModel struct{
+	
+}
+
+type page int
+const (
+	 searchPage page = iota
+	 resultsPage
+)
 
 func New(title string) *model {
 	styles := DefaultStyles()
 	searchField := textinput.New()
 	searchField.Placeholder = "Ex: Chainsaw Man"
 	searchField.Focus()
-	return &model{title: title, searchField: searchField, styles: styles}
+	return &model{title: title, searchField: searchField, styles: styles, currentPage: searchPage}
 	
 }
 
@@ -56,12 +67,13 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd)  {
 		m.height = msg.Height
 	case tea.KeyMsg:
 		switch msg.String() {
-		case "ctrl+c":
+		case "ctrl+c", "q":
 			return m, tea.Quit
 		case "enter":
 			m.output = m.searchField.Value()
 			log.Printf("searchValue: %s", m.output)
-			return m, tea.Quit
+			m.currentPage = resultsPage
+			return m, nil
 		}
 	}	
 	m.searchField, cmd = m.searchField.Update(msg)
@@ -73,16 +85,25 @@ func (m model)View() string {
 	if m.width == 0 || m.height == 0 {
 		return "Loading..."
 	}
-	return lipgloss.Place(
-		m.width,
-		m.height,
-		lipgloss.Center,
-		lipgloss.Center,
-			lipgloss.JoinVertical(
+
+	switch m.currentPage {
+	case searchPage:
+		return lipgloss.Place(
+			m.width,
+			m.height,
 			lipgloss.Center,
-			m.styles.titleText.Render(m.title),
-			m.styles.InputField.Render(m.searchField.View())),
+			lipgloss.Center,
+			lipgloss.JoinVertical(
+				lipgloss.Center,
+				m.styles.titleText.Render(m.title),
+				m.styles.InputField.Render(m.searchField.View())),
 		)
+	case resultsPage:
+		style := lipgloss.NewStyle().Foreground(lipgloss.Color("36"))
+		str := fmt.Sprintf("THIS IS THE RESULTS PAGE WITH SEARCH: %s", m.output)
+		return style.Render(str)
+	}
+	return ""
 }
 
 func Main() {
