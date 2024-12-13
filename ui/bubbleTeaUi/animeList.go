@@ -12,6 +12,7 @@ var docStyle = lipgloss.NewStyle().Margin(1, 2)
 
 type animeModel struct {
 	animeList list.Model
+	styles    lipgloss.Style
 }
 
 type animes struct {
@@ -58,17 +59,16 @@ func AnimeListMain() {
 	
 	d := list.NewDefaultDelegate()
 	d.ShowDescription = false
-	d.Styles.SelectedTitle = lipgloss.NewStyle().Foreground(lipgloss.Color("32"))
-	//d.Styles.NormalTitle = lipgloss.NewStyle().BorderForeground(lipgloss.Color("192"))
+	d.Styles.SelectedTitle = lipgloss.NewStyle().Foreground(lipgloss.Color("32")).PaddingLeft(3)
+	d.Styles.NormalTitle = lipgloss.NewStyle().BorderForeground(lipgloss.Color("192")).PaddingLeft(3)
+	
 	l := list.New(items, d, 0,0)
 	
 	l.SetShowStatusBar(false)	
 	
 	
 	m := animeModel{animeList: l}
-	titleColor := lipgloss.NewStyle().Foreground(lipgloss.Color("32"))
 	m.animeList.Title = "Search results for Tokyo Ghoul"
-	titleColor.Render(m.animeList.View())
 	
 	
 	
