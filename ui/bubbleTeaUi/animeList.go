@@ -7,7 +7,7 @@ import (
 	"log"
 )
 
-var docStyle = lipgloss.NewStyle().Margin(1, 2)
+var docStyle = lipgloss.NewStyle().Margin(1, 0)
 
 
 type animeModel struct {
@@ -63,6 +63,7 @@ func AnimeListMain() {
 	d.Styles.NormalTitle = lipgloss.NewStyle().BorderForeground(lipgloss.Color("192")).PaddingLeft(3)
 	
 	l := list.New(items, d, 0,0)
+	l.Styles.Title = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Background(lipgloss.NoColor{})
 	
 	l.SetShowStatusBar(false)	
 	
