@@ -1,10 +1,15 @@
 package bubbleTeaUi
 
 import (
+	"Chimimouryou/JsonsStrcuts"
+	"encoding/json"
+	"fmt"
 	"github.com/charmbracelet/bubbles/list"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
+	"io"
 	"log"
+	"net/http"
 )
 
 var docStyle = lipgloss.NewStyle().Margin(1, 0)
@@ -13,10 +18,72 @@ var docStyle = lipgloss.NewStyle().Margin(1, 0)
 type animeModel struct {
 	animeList list.Model
 	styles    lipgloss.Style
+	err error
+	loading bool
 }
 
 type animes struct {
 	title string
+}
+
+type (
+	result []string
+	errMsg struct{ err error}
+)
+
+func (e errMsg) Error() string { return e.err.Error()}
+
+func fetchSearchResults() tea.Msg  {
+	name := "naruto"
+	id, err := searchAnime(name)
+	log.Printf("this is the ID: %s", id )
+	if err != nil {
+		return errMsg{err}	
+	}
+	return result(id)
+}
+
+func searchAnime(name string) ([]string, error) {
+	var fullUrl string
+	fullUrl = fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", name)
+
+	resp, err := fetchJsonData(fullUrl)
+
+	var animeSearchQuery JsonsStrcuts.AnimeSearchQuery
+	err = json.Unmarshal(resp, &animeSearchQuery)
+	if err != nil {
+		fmt.Errorf("Failed to parse the response body: %v", err)
+		return nil, nil
+	}
+
+	idList := []string{}
+
+	for _, source := range animeSearchQuery.Results {
+		// TODO: Need to handle how im going to store these results. come time to create the UI...
+		idList = append(idList, source.ID)
+	}
+
+	return idList, nil
+
+}
+
+func fetchJsonData(fullUrl string) ([]byte, error) {
+
+	resp, err := http.Get(fullUrl)
+	if err != nil {
+		fmt.Errorf("Failed to make the request: %v", err)
+	}
+	//defer resp.Body.Close()
+
+	if resp.StatusCode != http.StatusOK {
+		fmt.Errorf("Request failed with status: %s", resp.Status)
+	}
+
+	body, err := io.ReadAll(resp.Body)
+	if err != nil {
+		fmt.Errorf("Failed to read the response body: %v", err)
+	}
+	return body, nil
 }
 
 func (a animes) Title() string  { return a.title }
@@ -25,7 +92,8 @@ func (a animes) FilterValue() string  { return a.title }
 
 
 func (m animeModel) Init() tea.Cmd {
-	return nil	
+	m.loading = true
+	return fetchSearchResults	
 }
 
 func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
@@ -37,7 +105,25 @@ func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.WindowSizeMsg:
 		h, v := docStyle.GetFrameSize()
 		m.animeList.SetSize(msg.Width-h, msg.Height-v)
+
+	case result:
+		m.loading = false
+		
+		searchResults := []string(msg)
+		items := []list.Item{}
+		
+		for _, title := range searchResults {
+			items = append(items, animes{title: string(title)})
+		}
+		
+		log.Printf("Search Results: %s", items)
+
+		m.animeList.SetItems(items)
+		return m, nil	
+	case errMsg:
+		m.err = msg
 	}
+	
 
 	var cmd tea.Cmd
 	m.animeList, cmd = m.animeList.Update(msg)
@@ -46,16 +132,17 @@ func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 
 func (m animeModel) View() string {
-	return docStyle.Render(m.animeList.View())
+
+	log.Printf("poo %v", m.loading)
+	if m.loading {
+		return docStyle.Render("Fetching Search Results...")
+	}
 	
+	return docStyle.Render(m.animeList.View())
 }
 
 func AnimeListMain() {
-	items := []list.Item{
-		animes{title: "Tokyo Ghoul"},
-		animes{title: "Tokyo Ghoul:RE"},
-		animes{title: "Tokyo Ghoul Root A"},
-	}
+	items := []list.Item{}
 	
 	d := list.NewDefaultDelegate()
 	d.ShowDescription = false
@@ -63,12 +150,12 @@ func AnimeListMain() {
 	d.Styles.NormalTitle = lipgloss.NewStyle().BorderForeground(lipgloss.Color("192")).PaddingLeft(3)
 	
 	l := list.New(items, d, 0,0)
-	l.Styles.Title = lipgloss.NewStyle().Foreground(lipgloss.Color("10")).Background(lipgloss.NoColor{})
+	l.Styles.Title = lipgloss.NewStyle().Foreground(lipgloss.Color("#ffffff"))
 	
 	l.SetShowStatusBar(false)	
 	
 	
-	m := animeModel{animeList: l}
+	m := animeModel{animeList: l, loading: true}
 	m.animeList.Title = "Search results for Tokyo Ghoul"
 	
 	

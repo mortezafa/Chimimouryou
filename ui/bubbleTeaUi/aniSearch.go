@@ -1,7 +1,6 @@
 package bubbleTeaUi
 
 import (
-	"fmt"
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
@@ -32,13 +31,9 @@ type model struct {
 	searchField textinput.Model 
 	styles *Styles
 	currentPage	page
-	resmodel resultsModel
+	resmodel animeModel
 }
 
-type resultsModel struct{
-	
-	
-}
 
 type page int
 const (
@@ -106,9 +101,8 @@ func (m model)View() string {
 				m.styles.InputField.Render(m.searchField.View())),
 		)
 	case resultsPage:
-		style := lipgloss.NewStyle().Foreground(lipgloss.Color("36"))
-		str := fmt.Sprintf("THIS IS THE RESULTS PAGE WITH SEARCH: %s", m.output)
-		return style.Render(str)
+		log.Printf("Stuff: %s", m.resmodel.animeList.Title)
+		return m.resmodel.View() 
 	}
 	return ""
 }
