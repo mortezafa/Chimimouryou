@@ -14,32 +14,31 @@ import (
 
 var docStyle = lipgloss.NewStyle().Margin(1, 0)
 
-
 type animeModel struct {
 	animeList list.Model
 	styles    lipgloss.Style
-	err error
-	loading bool
+	err       error
+	loading   bool
 }
 
 type animes struct {
 	title string
-	id string
+	id    string
 	image string
 }
 
 type (
 	result []animes
-	errMsg struct{ err error}
+	errMsg struct{ err error }
 )
 
-func (e errMsg) Error() string { return e.err.Error()}
+func (e errMsg) Error() string { return e.err.Error() }
 
-func fetchSearchResults() tea.Msg  {
+func fetchSearchResults() tea.Msg {
 	name := "bleach"
 	animeList, err := searchAnime(name)
 	if err != nil {
-		return errMsg{err}	
+		return errMsg{err}
 	}
 	return result(animeList)
 }
@@ -57,14 +56,13 @@ func searchAnime(name string) ([]animes, error) {
 		return nil, nil
 	}
 
-	
 	animeList := []animes{}
 	for _, source := range animeSearchQuery.Results {
-			animeList = append(animeList, animes{
-				title: source.Title,
-				id:    source.ID,
-				image: source.Image,
-			})	
+		animeList = append(animeList, animes{
+			title: source.Title,
+			id:    source.ID,
+			image: source.Image,
+		})
 	}
 
 	return animeList, nil
@@ -90,14 +88,13 @@ func fetchJsonData(fullUrl string) ([]byte, error) {
 	return body, nil
 }
 
-func (a animes) Title() string  { return a.title }
-func (a animes) Description() string  { return "" }
-func (a animes) FilterValue() string  { return a.title }
-
+func (a animes) Title() string       { return a.title }
+func (a animes) Description() string { return "" }
+func (a animes) FilterValue() string { return a.title }
 
 func (m animeModel) Init() tea.Cmd {
 	m.loading = true
-	return fetchSearchResults	
+	return fetchSearchResults
 }
 
 func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
@@ -112,10 +109,10 @@ func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 	case result:
 		m.loading = false
-		
+
 		searchResults := []animes(msg)
 		items := []list.Item{}
-		
+
 		for _, anime := range searchResults {
 			items = append(items, animes{
 				title: anime.title,
@@ -123,21 +120,19 @@ func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				image: anime.id,
 			})
 		}
-		
+
 		log.Printf("Search Results: %s", items)
 
 		m.animeList.SetItems(items)
-		return m, nil	
+		return m, nil
 	case errMsg:
 		m.err = msg
 	}
-	
 
 	var cmd tea.Cmd
 	m.animeList, cmd = m.animeList.Update(msg)
 	return m, cmd
 }
-
 
 func (m animeModel) View() string {
 
@@ -145,40 +140,36 @@ func (m animeModel) View() string {
 	if m.loading {
 		return docStyle.Render("Fetching Search Results...")
 	}
-	
+
 	return docStyle.Render(m.animeList.View())
 }
 
 func AnimeListMain() {
 	items := []list.Item{}
-	
+
 	d := list.NewDefaultDelegate()
 	d.ShowDescription = false
-	d.Styles.SelectedTitle = lipgloss.NewStyle().Foreground(lipgloss.Color("32")).PaddingLeft(3)
+	d.Styles.SelectedTitle = lipgloss.NewStyle().BorderStyle(lipgloss.RoundedBorder()).Foreground(lipgloss.Color("#EF6461"))
 	d.Styles.NormalTitle = lipgloss.NewStyle().BorderForeground(lipgloss.Color("192")).PaddingLeft(3)
-	
-	l := list.New(items, d, 0,0)
-	l.Styles.Title = lipgloss.NewStyle().Foreground(lipgloss.Color("#ffffff"))
-	
-	l.SetShowStatusBar(false)	
-	
-	
+
+	l := list.New(items, d, 0, 0)
+	l.Styles.Title = lipgloss.NewStyle().Foreground(lipgloss.Color("#cacccf")).Background(lipgloss.Color("#EF6461"))
+
+	l.SetShowStatusBar(false)
+
 	m := animeModel{animeList: l, loading: true}
-	m.animeList.Title = "Search results for Tokyo Ghoul"
-	
-	
-	
+	m.animeList.Title = "Search results for Bleach"
+
 	f, err1 := tea.LogToFile("debug.log", "debug")
-	if err1!= nil {
+	if err1 != nil {
 		log.Fatal("err: %w", err1)
 	}
 	defer f.Close()
-	
+
 	p := tea.NewProgram(m, tea.WithAltScreen())
 	_, err := p.Run()
-	
+
 	if err != nil {
-	log.Fatal(err)
+		log.Fatal(err)
 	}
-	
 }
