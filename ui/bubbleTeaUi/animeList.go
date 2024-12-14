@@ -24,26 +24,27 @@ type animeModel struct {
 
 type animes struct {
 	title string
+	id string
+	image string
 }
 
 type (
-	result []string
+	result []animes
 	errMsg struct{ err error}
 )
 
 func (e errMsg) Error() string { return e.err.Error()}
 
 func fetchSearchResults() tea.Msg  {
-	name := "naruto"
-	id, err := searchAnime(name)
-	log.Printf("this is the ID: %s", id )
+	name := "bleach"
+	animeList, err := searchAnime(name)
 	if err != nil {
 		return errMsg{err}	
 	}
-	return result(id)
+	return result(animeList)
 }
 
-func searchAnime(name string) ([]string, error) {
+func searchAnime(name string) ([]animes, error) {
 	var fullUrl string
 	fullUrl = fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", name)
 
@@ -56,14 +57,17 @@ func searchAnime(name string) ([]string, error) {
 		return nil, nil
 	}
 
-	idList := []string{}
-
+	
+	animeList := []animes{}
 	for _, source := range animeSearchQuery.Results {
-		// TODO: Need to handle how im going to store these results. come time to create the UI...
-		idList = append(idList, source.ID)
+			animeList = append(animeList, animes{
+				title: source.Title,
+				id:    source.ID,
+				image: source.Image,
+			})	
 	}
 
-	return idList, nil
+	return animeList, nil
 
 }
 
@@ -109,11 +113,15 @@ func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case result:
 		m.loading = false
 		
-		searchResults := []string(msg)
+		searchResults := []animes(msg)
 		items := []list.Item{}
 		
-		for _, title := range searchResults {
-			items = append(items, animes{title: string(title)})
+		for _, anime := range searchResults {
+			items = append(items, animes{
+				title: anime.title,
+				id:    anime.id,
+				image: anime.id,
+			})
 		}
 		
 		log.Printf("Search Results: %s", items)
