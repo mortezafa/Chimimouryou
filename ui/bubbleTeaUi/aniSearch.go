@@ -22,7 +22,7 @@ func DefaultStyles() *Styles {
 	return s
 }
 
-type model struct {
+type searchModel struct {
 	title       string
 	width       int
 	height      int
@@ -33,21 +33,21 @@ type model struct {
 
 type page int
 
-func New(title string) *model {
+func NewSearchModel() *searchModel {
 	styles := DefaultStyles()
 	searchField := textinput.New()
 	searchField.Placeholder = "Ex: Chainsaw Man"
 	searchField.Focus()
-	return &model{title: title, searchField: searchField, styles: styles}
+	return &searchModel{title: "Enter the anime you would like to search...", searchField: searchField, styles: styles}
 }
 
 // Defines the defaults state of the app
-func (m model) Init() tea.Cmd {
+func (m searchModel) Init() tea.Cmd {
 	return nil
 }
 
 // Function that re-renders our view with new state
-func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+func (m *searchModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	var cmd tea.Cmd
 	switch msg := msg.(type) {
 	case tea.WindowSizeMsg:
@@ -72,8 +72,8 @@ func (m model) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 // Function that renders our app
-func (m model) View() string {
-	if m.width == 0 || m.height == 0 {
+func (m searchModel) View() string {
+	if m.width == 0 {
 		return "Loading..."
 	}
 
@@ -87,11 +87,10 @@ func (m model) View() string {
 			m.styles.titleText.Render(m.title),
 			m.styles.InputField.Render(m.searchField.View())),
 	)
-	return ""
 }
 
 func searchMain() {
-	m := New("Enter the anime you would like to search...")
+	m := NewSearchModel()
 
 	f, err1 := tea.LogToFile("debug.log", "debug")
 	if err1 != nil {
@@ -99,7 +98,7 @@ func searchMain() {
 	}
 	defer f.Close()
 
-	p := tea.NewProgram(m, tea.WithAltScreen())
+	p := tea.NewProgram(m)
 	_, err := p.Run()
 	if err != nil {
 		log.Fatal(err)

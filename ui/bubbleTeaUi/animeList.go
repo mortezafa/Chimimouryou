@@ -1,3 +1,13 @@
+/*
+* Model manages state.
+* Update is going to switch on our state, and send updates accordingly...?
+*
+*
+*
+*
+*
+*
+ */
 package bubbleTeaUi
 
 import (
