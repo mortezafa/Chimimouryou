@@ -47,7 +47,7 @@ func (m searchModel) Init() tea.Cmd {
 }
 
 // Function that re-renders our view with new state
-func (m *searchModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+func (m searchModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	var cmd tea.Cmd
 	switch msg := msg.(type) {
 	case tea.WindowSizeMsg:
@@ -74,7 +74,7 @@ func (m *searchModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 // Function that renders our app
 func (m searchModel) View() string {
 	if m.width == 0 {
-		return "Loading..."
+		m.width = 80
 	}
 
 	return lipgloss.Place(

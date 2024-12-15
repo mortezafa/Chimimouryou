@@ -15,9 +15,8 @@ const (
 
 type MainModel struct {
 	state       state
-	searchModel searchModel
-	animeModel  animeModel
-	activeModel tea.Model
+	searchModel tea.Model
+	animeModel  tea.Model
 	styles      *Styles
 }
 
@@ -26,35 +25,46 @@ func New() tea.Model {
 		state:       searchAPage,
 		searchModel: *NewSearchModel(),
 		animeModel:  *NewResultsModel(),
-		activeModel: NewSearchModel(),
 		styles:      DefaultStyles(),
 	}
 }
 
 func (m MainModel) Init() tea.Cmd {
-	return m.activeModel.Init()
+	return nil
 }
 
 func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
-	log.Printf("insdie Main")
+	var cmd tea.Cmd
+	var cmds []tea.Cmd
+
 	switch m.state {
 	case searchAPage:
-		log.Printf("Insde SearchAPage")
-		model, cmd := m.searchModel.Update(msg)
-		m.searchModel = model.(searchModel)
-
+		newModel, newCmd := m.searchModel.Update(msg)
+		m.searchModel = newModel.(searchModel)
 		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "enter" {
 			m.state = animePage
-			m.activeModel = m.animeModel
-			return m, m.activeModel.Init()
 		}
-		return m, cmd
+		cmd = newCmd
+
+	case animePage:
+		newModel, newCmd := m.animeModel.Update(msg)
+		m.animeModel = newModel.(animeModel)
+		cmd = newCmd
 	}
-	return m, nil
+	cmds = append(cmds, cmd)
+	return m, tea.Batch(cmds...)
 }
 
 func (m MainModel) View() string {
-	return m.activeModel.View()
+	switch m.state {
+	case searchAPage:
+		return m.searchModel.View()
+
+	case animePage:
+		return m.animeModel.View()
+	}
+
+	return "fail"
 }
 
 func Main() {

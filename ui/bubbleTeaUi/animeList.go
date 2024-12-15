@@ -67,6 +67,7 @@ func fetchSearchResults() tea.Msg {
 	if err != nil {
 		return errMsg{err}
 	}
+	log.Printf("about to return Results")
 	return result(animeList)
 }
 
@@ -164,28 +165,15 @@ func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 func (m animeModel) View() string {
 
 	log.Printf("poo %v", m.loading)
-	if m.loading {
-		return docStyle.Render("Fetching Search Results...")
-	}
+	// if m.loading {
+	// 	return docStyle.Render("Fetching Search Results...")
+	// }
 
 	return docStyle.Render(m.animeList.View())
 }
 
 func AnimeListMain() {
-	items := []list.Item{}
-
-	d := list.NewDefaultDelegate()
-	d.ShowDescription = false
-	d.Styles.SelectedTitle = lipgloss.NewStyle().BorderStyle(lipgloss.RoundedBorder()).Foreground(lipgloss.Color("#EF6461"))
-	d.Styles.NormalTitle = lipgloss.NewStyle().BorderForeground(lipgloss.Color("192")).PaddingLeft(3)
-
-	l := list.New(items, d, 0, 0)
-	l.Styles.Title = lipgloss.NewStyle().Foreground(lipgloss.Color("#cacccf")).Background(lipgloss.Color("#EF6461"))
-
-	l.SetShowStatusBar(false)
-
-	m := animeModel{animeList: l, loading: true}
-	m.animeList.Title = "Search results for Bleach"
+	m := NewResultsModel()
 
 	f, err1 := tea.LogToFile("debug.log", "debug")
 	if err1 != nil {
