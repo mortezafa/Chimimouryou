@@ -43,6 +43,7 @@ func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.searchModel = newModel.(searchModel)
 		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "enter" {
 			m.state = animePage
+			m.animeModel.Init()
 		}
 		cmd = newCmd
 
