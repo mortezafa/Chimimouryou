@@ -16,7 +16,6 @@ var docStyle = lipgloss.NewStyle().Margin(1, 0)
 
 type animeModel struct {
 	animeList list.Model
-	styles    lipgloss.Style
 	err       error
 	loading   bool
 }
@@ -31,6 +30,24 @@ type (
 	result []animes
 	errMsg struct{ err error }
 )
+
+func NewResultsModel() *animeModel {
+	items := []list.Item{}
+
+	d := list.NewDefaultDelegate()
+	d.ShowDescription = false
+	d.Styles.SelectedTitle = lipgloss.NewStyle().BorderStyle(lipgloss.RoundedBorder()).Foreground(lipgloss.Color("#EF6461"))
+	d.Styles.NormalTitle = lipgloss.NewStyle().BorderForeground(lipgloss.Color("192")).PaddingLeft(3)
+
+	l := list.New(items, d, 0, 0)
+	l.Styles.Title = lipgloss.NewStyle().Foreground(lipgloss.Color("#cacccf")).Background(lipgloss.Color("#EF6461"))
+
+	l.SetShowStatusBar(false)
+
+	m := animeModel{animeList: l, loading: true}
+	m.animeList.Title = "Search results for Bleach"
+	return &m
+}
 
 func (e errMsg) Error() string { return e.err.Error() }
 

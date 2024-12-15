@@ -19,9 +19,9 @@ import (
 var searchCmd = &cobra.Command{
 	Use:   "search",
 	Short: "A brief description of your command",
-	Long: `...`,
+	Long:  `...`,
 	Run: func(cmd *cobra.Command, args []string) {
-		bubbleTeaUi.AnimeListMain()
+		bubbleTeaUi.Main()
 
 		//animeId, err := searchAnime(animeName)
 		//if err != nil {
@@ -30,7 +30,7 @@ var searchCmd = &cobra.Command{
 		//episodeId, err := getAnimeInfo(animeId)
 		//if err != nil {
 		//	fmt.Println(err)
-		//}	
+		//}
 		//parseJsonData(episodeId)
 		//
 	},
@@ -41,8 +41,6 @@ func init() {
 }
 
 // First we need to get the anime info
-
-
 
 func parseJsonData(episodeId string) {
 	jsonBody, err := fetchVideoFile(episodeId)
@@ -82,7 +80,6 @@ func parseJsonData(episodeId string) {
 
 }
 
-
 func fetchJsonData(fullUrl string) ([]byte, error) {
 
 	resp, err := http.Get(fullUrl)
@@ -98,11 +95,11 @@ func fetchJsonData(fullUrl string) ([]byte, error) {
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		fmt.Errorf("Failed to read the response body: %v", err)
-	}	
+	}
 	return body, nil
 }
 
-func fetchVideoFile (epidsodeId string) ([]byte, error) {
+func fetchVideoFile(epidsodeId string) ([]byte, error) {
 	baseURL := fmt.Sprintf("http://localhost:3000/anime/gogoanime/watch/%s", epidsodeId)
 
 	params := url.Values{}
@@ -116,7 +113,7 @@ func fetchVideoFile (epidsodeId string) ([]byte, error) {
 		fmt.Errorf("Failed to fetch video file: %v", err)
 		return nil, err
 	}
-	
+
 	return jsonData, nil
 
 }
@@ -124,18 +121,18 @@ func fetchVideoFile (epidsodeId string) ([]byte, error) {
 func searchAnime(name string) (string, error) {
 	var fullUrl string
 	fullUrl = fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", name)
-	
+
 	resp, err := fetchJsonData(fullUrl)
-	
+
 	var animeSearchQuery JsonsStrcuts.AnimeSearchQuery
 	err = json.Unmarshal(resp, &animeSearchQuery)
 	if err != nil {
 		fmt.Errorf("Failed to parse the response body: %v", err)
 		return "", nil
 	}
-	
+
 	idList := []string{}
-	
+
 	for _, source := range animeSearchQuery.Results {
 		// TODO: Need to handle how im going to store these results. come time to create the UI...
 		idList = append(idList, source.ID)
@@ -145,22 +142,22 @@ func searchAnime(name string) (string, error) {
 
 }
 
-func getAnimeInfo(animeID string) (string, error)  {
+func getAnimeInfo(animeID string) (string, error) {
 	url := fmt.Sprintf("http://localhost:3000/anime/gogoanime/info/%s", animeID)
-	
+
 	resp, err := fetchJsonData(url)
-	
+
 	var animeInfo JsonsStrcuts.AnimeInfo
 	err = json.Unmarshal(resp, &animeInfo)
 	if err != nil {
 		fmt.Errorf("Failed to parse the response body: %v", err)
 		return "", nil
 	}
-	
+
 	for _, source := range animeInfo.Episodes {
 		return source.ID, nil
 	}
-	
+
 	return "", nil
-	
+
 }
