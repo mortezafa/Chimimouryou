@@ -74,7 +74,6 @@ func (m searchModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 // Function that renders our app
 func (m searchModel) View() string {
 	if m.width == 0 {
-		m.width = 80
 	}
 
 	return lipgloss.Place(
@@ -87,20 +86,4 @@ func (m searchModel) View() string {
 			m.styles.titleText.Render(m.title),
 			m.styles.InputField.Render(m.searchField.View())),
 	)
-}
-
-func searchMain() {
-	m := NewSearchModel()
-
-	f, err1 := tea.LogToFile("debug.log", "debug")
-	if err1 != nil {
-		log.Fatal("err: %w", err1)
-	}
-	defer f.Close()
-
-	p := tea.NewProgram(m)
-	_, err := p.Run()
-	if err != nil {
-		log.Fatal(err)
-	}
 }

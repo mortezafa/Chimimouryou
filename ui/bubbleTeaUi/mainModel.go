@@ -18,6 +18,7 @@ type MainModel struct {
 	searchModel tea.Model
 	animeModel  tea.Model
 	styles      *Styles
+	WindowSize tea.WindowSizeMsg
 }
 
 func New() tea.Model {
@@ -36,6 +37,10 @@ func (m MainModel) Init() tea.Cmd {
 func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	var cmd tea.Cmd
 	var cmds []tea.Cmd
+	switch msg := msg.(type) {
+	case tea.WindowSizeMsg:
+		m.WindowSize = msg
+	}
 
 	switch m.state {
 	case searchAPage:
@@ -43,7 +48,8 @@ func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.searchModel = newModel.(searchModel)
 		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "enter" {
 			m.state = animePage
-			m.animeModel.Init()
+			initCmd := m.animeModel.Init()
+			cmds = append(cmds, initCmd, tea.WindowSize())
 		}
 		cmd = newCmd
 
@@ -65,7 +71,7 @@ func (m MainModel) View() string {
 		return m.animeModel.View()
 	}
 
-	return "fail"
+	return "fail to display views (form main model)"
 }
 
 func Main() {

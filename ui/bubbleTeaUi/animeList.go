@@ -150,8 +150,8 @@ func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		}
 
 		log.Printf("Search Results: %s", items)
-
 		m.animeList.SetItems(items)
+		log.Println("Current Anime List when NewResults is called")
 		return m, nil
 	case errMsg:
 		m.err = msg
@@ -165,26 +165,10 @@ func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 func (m animeModel) View() string {
 
 	log.Printf("poo %v", m.loading)
-	// if m.loading {
-	// 	return docStyle.Render("Fetching Search Results...")
-	// }
+	if m.loading {
+		return docStyle.Render("Fetching Search Results...")
+	}
 
 	return docStyle.Render(m.animeList.View())
 }
 
-func AnimeListMain() {
-	m := NewResultsModel()
-
-	f, err1 := tea.LogToFile("debug.log", "debug")
-	if err1 != nil {
-		log.Fatal("err: %w", err1)
-	}
-	defer f.Close()
-
-	p := tea.NewProgram(m, tea.WithAltScreen())
-	_, err := p.Run()
-
-	if err != nil {
-		log.Fatal(err)
-	}
-}
