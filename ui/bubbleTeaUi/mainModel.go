@@ -50,11 +50,8 @@ func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.state = animePage
 			searchValue := m.searchModel.(searchModel).output
 
-			updatedAnimeModel, searchCmd := m.animeModel.(animeModel).SetSearchTerm(searchValue)
-
-			m.animeModel = updatedAnimeModel
-
-			cmds = append(cmds, searchCmd, tea.WindowSize())
+			m.animeModel, cmd = m.animeModel.(animeModel).SetSearchTerm(searchValue)
+			cmds = append(cmds, cmd, tea.WindowSize())
 		}
 		cmd = newCmd
 
