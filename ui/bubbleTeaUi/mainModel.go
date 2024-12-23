@@ -48,8 +48,13 @@ func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		m.searchModel = newModel.(searchModel)
 		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "enter" {
 			m.state = animePage
-			initCmd := m.animeModel.Init()
-			cmds = append(cmds, initCmd, tea.WindowSize())
+			searchValue := m.searchModel.(searchModel).output
+
+			updatedAnimeModel, searchCmd := m.animeModel.(animeModel).SetSearchTerm(searchValue)
+
+			m.animeModel = updatedAnimeModel
+
+			cmds = append(cmds, searchCmd, tea.WindowSize())
 		}
 		cmd = newCmd
 
@@ -61,6 +66,7 @@ func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	cmds = append(cmds, cmd)
 	return m, tea.Batch(cmds...)
 }
+
 
 func (m MainModel) View() string {
 	switch m.state {

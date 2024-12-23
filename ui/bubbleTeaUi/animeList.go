@@ -26,6 +26,7 @@ var docStyle = lipgloss.NewStyle().Margin(1, 0)
 
 type animeModel struct {
 	animeList list.Model
+	searchTerm string
 	err       error
 	loading   bool
 }
@@ -55,20 +56,21 @@ func NewResultsModel() *animeModel {
 	l.SetShowStatusBar(false)
 
 	m := animeModel{animeList: l, loading: true}
-	m.animeList.Title = "Search results for Bleach"
+	m.animeList.Title = fmt.Sprintf("Search results for %s", m.searchTerm)
 	return &m
 }
 
 func (e errMsg) Error() string { return e.err.Error() }
 
-func fetchSearchResults() tea.Msg {
-	name := "bleach"
-	animeList, err := searchAnime(name)
-	if err != nil {
-		return errMsg{err}
+func fetchSearchResults(name string) tea.Cmd {
+	return func() tea.Msg {
+		animeList, err := searchAnime(name)
+		if err != nil {
+			return errMsg{err}
+		}
+		log.Printf("about to return Results")
+		return result(animeList)
 	}
-	log.Printf("about to return Results")
-	return result(animeList)
 }
 
 func searchAnime(name string) ([]animes, error) {
@@ -97,6 +99,13 @@ func searchAnime(name string) ([]animes, error) {
 
 }
 
+func (m animeModel) SetSearchTerm(term string) (animeModel, tea.Cmd) {
+	m.loading = true
+	m.searchTerm = term
+	m.animeList.Title = fmt.Sprintf("Search Results for %s", m.searchTerm)
+	return m, fetchSearchResults(term)
+}
+
 func fetchJsonData(fullUrl string) ([]byte, error) {
 
 	resp, err := http.Get(fullUrl)
@@ -122,7 +131,7 @@ func (a animes) FilterValue() string { return a.title }
 
 func (m animeModel) Init() tea.Cmd {
 	m.loading = true
-	return fetchSearchResults
+	return fetchSearchResults(m.searchTerm)
 }
 
 func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
