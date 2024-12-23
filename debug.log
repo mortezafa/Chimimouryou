@@ -1185,3 +1185,126 @@ debug 2024/12/22 20:25:46 poo false
 debug 2024/12/22 20:25:46 poo false
 debug 2024/12/22 20:25:46 poo false
 debug 2024/12/22 20:25:46 poo false
+debug 2024/12/23 12:26:45 poo false
+debug 2024/12/23 12:26:45 poo false
+debug 2024/12/23 12:26:45 poo false
+debug 2024/12/23 12:26:45 poo false
+debug 2024/12/23 12:26:46 poo false
+debug 2024/12/23 12:26:46 poo false
+debug 2024/12/23 12:26:46 poo false
+debug 2024/12/23 12:26:46 poo false
+debug 2024/12/23 12:26:46 poo false
+debug 2024/12/23 12:26:46 poo false
+debug 2024/12/23 12:26:46 poo false
+debug 2024/12/23 12:26:47 poo false
+debug 2024/12/23 12:26:47 poo false
+debug 2024/12/23 12:32:30 poo false
+debug 2024/12/23 12:32:30 poo false
+debug 2024/12/23 12:32:34 searchValue: tokyo Ghoul
+debug 2024/12/23 12:32:34 poo true
+debug 2024/12/23 12:32:34 poo true
+debug 2024/12/23 12:32:34 poo true
+debug 2024/12/23 12:32:34 poo true
+debug 2024/12/23 12:32:35 about to return Results
+debug 2024/12/23 12:32:35 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 12:32:35 Current Anime List when NewResults is called
+debug 2024/12/23 12:32:35 poo false
+debug 2024/12/23 12:32:35 poo false
+debug 2024/12/23 12:32:35 poo false
+debug 2024/12/23 12:32:36 poo false
+debug 2024/12/23 12:32:36 poo false
+debug 2024/12/23 12:32:36 poo false
+debug 2024/12/23 12:32:36 poo false
+debug 2024/12/23 12:32:36 poo false
+debug 2024/12/23 12:32:36 poo false
+debug 2024/12/23 12:32:37 poo false
+debug 2024/12/23 12:32:37 poo false
+debug 2024/12/23 12:32:37 poo false
+debug 2024/12/23 12:32:37 poo false
+debug 2024/12/23 12:32:37 poo false
+debug 2024/12/23 12:32:37 poo false
+debug 2024/12/23 12:32:38 poo false
+debug 2024/12/23 12:32:38 poo false
+debug 2024/12/23 12:37:16 poo false
+debug 2024/12/23 12:37:17 poo false
+debug 2024/12/23 12:37:17 poo false
+debug 2024/12/23 12:37:17 poo false
+debug 2024/12/23 12:37:18 poo false
+debug 2024/12/23 12:37:18 poo false
+debug 2024/12/23 12:37:21 poo false
+debug 2024/12/23 12:37:22 poo false
+debug 2024/12/23 12:37:23 poo false
+debug 2024/12/23 12:47:23 poo false
+debug 2024/12/23 12:47:23 poo false
+debug 2024/12/23 12:47:35 searchValue: Tokyo ghoul
+debug 2024/12/23 12:47:35 poo true
+debug 2024/12/23 12:47:35 poo true
+debug 2024/12/23 12:47:35 poo true
+debug 2024/12/23 12:47:35 poo true
+debug 2024/12/23 12:47:35 about to return Results
+debug 2024/12/23 12:47:35 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 12:47:35 Current Anime List when NewResults is called
+debug 2024/12/23 12:47:35 poo false
+debug 2024/12/23 12:47:36 poo false
+debug 2024/12/23 12:47:36 poo false
+debug 2024/12/23 12:47:36 poo false
+debug 2024/12/23 12:47:37 poo false
+debug 2024/12/23 12:49:52 searchValue: Tokyo Ghoul
+debug 2024/12/23 12:49:52 poo true
+debug 2024/12/23 12:49:52 poo true
+debug 2024/12/23 12:49:52 poo true
+debug 2024/12/23 12:49:52 poo true
+debug 2024/12/23 12:49:53 about to return Results
+debug 2024/12/23 12:49:53 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 12:49:53 Current Anime List when NewResults is called
+debug 2024/12/23 12:49:53 poo false
+debug 2024/12/23 12:49:53 poo false
+debug 2024/12/23 12:49:53 poo false
+debug 2024/12/23 12:49:54 poo false
+debug 2024/12/23 12:49:54 poo false
+debug 2024/12/23 12:49:54 poo false
+debug 2024/12/23 12:49:54 poo false
+debug 2024/12/23 12:49:54 poo false
+debug 2024/12/23 12:49:54 poo false
+debug 2024/12/23 12:52:04 searchValue: Tokyo Ghoul
+debug 2024/12/23 12:52:04 poo true
+debug 2024/12/23 12:52:04 poo true
+debug 2024/12/23 12:52:04 poo true
+debug 2024/12/23 12:52:04 poo true
+debug 2024/12/23 12:52:05 about to return Results
+debug 2024/12/23 12:52:05 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 12:52:05 Current Anime List when NewResults is called
+debug 2024/12/23 12:52:05 poo false
+debug 2024/12/23 12:52:06 poo false
+debug 2024/12/23 12:52:06 poo false
+debug 2024/12/23 12:54:39 searchValue: Tokyo Ghoul
+debug 2024/12/23 12:54:39 poo true
+debug 2024/12/23 12:54:39 poo true
+debug 2024/12/23 12:54:39 poo true
+debug 2024/12/23 12:54:39 poo true
+debug 2024/12/23 12:54:40 about to return Results
+debug 2024/12/23 12:54:40 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 12:54:40 Current Anime List when NewResults is called
+debug 2024/12/23 12:54:40 poo false
+debug 2024/12/23 12:56:53 searchValue: Tokyo Ghoul
+debug 2024/12/23 12:56:53 poo true
+debug 2024/12/23 12:56:53 poo true
+debug 2024/12/23 12:56:53 poo true
+debug 2024/12/23 12:56:54 poo true
+debug 2024/12/23 12:56:54 about to return Results
+debug 2024/12/23 12:56:54 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 12:56:54 Current Anime List when NewResults is called
+debug 2024/12/23 12:56:54 poo false
+debug 2024/12/23 12:56:55 poo false
+debug 2024/12/23 12:56:55 poo false
+debug 2024/12/23 12:58:05 searchValue: Naruto
+debug 2024/12/23 12:58:05 poo true
+debug 2024/12/23 12:58:05 poo true
+debug 2024/12/23 12:58:05 poo true
+debug 2024/12/23 12:58:05 poo true
+debug 2024/12/23 12:58:06 about to return Results
+debug 2024/12/23 12:58:06 Search Results: [{Naruto naruto naruto} {Naruto (Dub) naruto-dub naruto-dub} {Naruto Shippuden naruto-shippuden naruto-shippuden} {Naruto Shippuden (Dub) naruto-shippuuden-dub naruto-shippuuden-dub} {Boruto: Naruto the Movie boruto-naruto-the-movie boruto-naruto-the-movie} {Naruto Shippuden Movie 1 naruto-shippuuden-movie-1 naruto-shippuuden-movie-1} {Boruto: Naruto the Movie (Dub) boruto-naruto-the-movie-dub boruto-naruto-the-movie-dub} {Boruto: Naruto Next Generations boruto-naruto-next-generations boruto-naruto-next-generations} {Naruto: Shippuuden Movie 1 (Dub) naruto-shippuuden-movie-1-dub naruto-shippuuden-movie-1-dub} {Naruto Shippuden Movie 5 Special naruto-shippuden-movie-5-special naruto-shippuden-movie-5-special} {The Last: Naruto the Movie (Dub) the-last-naruto-the-movie-dub the-last-naruto-the-movie-dub} {Naruto Shippuden Movie 2: Kizuna naruto-shippuuden-movie-2-kizuna naruto-shippuuden-movie-2-kizuna} {Naruto Shippuden Movie 7: The Last naruto-shippuuden-movie-7-the-last naruto-shippuuden-movie-7-the-last} {Naruto Shippuden: Sunny Side Battle naruto-shippuuden-sunny-side-battle naruto-shippuuden-sunny-side-battle} {Boruto: Naruto Next Generations (Dub) boruto-naruto-next-generations-dub boruto-naruto-next-generations-dub} {Naruto Shippuden Movie 5: Blood Prison naruto-shippuuden-movie-5-blood-prison naruto-shippuuden-movie-5-blood-prison} {Naruto Shippuden Movie 6: Road to Ninja naruto-shippuuden-movie-6-road-to-ninja naruto-shippuuden-movie-6-road-to-ninja} {Naruto Shippuden Movie 4: The Lost Tower naruto-shippuuden-movie-4-the-lost-tower naruto-shippuuden-movie-4-the-lost-tower} {Naruto: Shippuuden Movie 2 - Kizuna (Dub) naruto-shippuuden-movie-2-kizuna-dub naruto-shippuuden-movie-2-kizuna-dub} {Naruto: Akaki Yotsuba no Clover wo Sagase naruto-akaki-yotsuba-no-clover-wo-sagase naruto-akaki-yotsuba-no-clover-wo-sagase}]
+debug 2024/12/23 12:58:06 Current Anime List when NewResults is called
+debug 2024/12/23 12:58:06 poo false
+debug 2024/12/23 12:58:06 poo false
+debug 2024/12/23 12:58:07 poo false

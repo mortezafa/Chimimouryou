@@ -11,12 +11,14 @@ type state int
 const (
 	searchAPage state = iota
 	animePage
+	episodePage
 )
 
 type MainModel struct {
 	state       state
 	searchModel tea.Model
 	animeModel  tea.Model
+	episodeModel tea.Model
 	styles      *Styles
 	WindowSize tea.WindowSizeMsg
 }
@@ -26,6 +28,7 @@ func New() tea.Model {
 		state:       searchAPage,
 		searchModel: *NewSearchModel(),
 		animeModel:  *NewResultsModel(),
+		episodeModel: NewEpModel(),
 		styles:      DefaultStyles(),
 	}
 }
@@ -59,6 +62,17 @@ func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 		newModel, newCmd := m.animeModel.Update(msg)
 		m.animeModel = newModel.(animeModel)
 		cmd = newCmd
+
+		switch msg := msg.(type) {
+		case tea.KeyMsg:
+			switch msg.String() {
+			case "enter":
+				if _, ok := m.animeModel.(animeModel).animeList.SelectedItem().(animes); ok {
+					m.state = episodePage	
+				}
+			}
+		}
+		m.episodeModel, cmd = m.episodeModel.Update(msg)
 	}
 	cmds = append(cmds, cmd)
 	return m, tea.Batch(cmds...)
@@ -72,6 +86,8 @@ func (m MainModel) View() string {
 
 	case animePage:
 		return m.animeModel.View()
+	case episodePage: return m.episodeModel.View()
+		
 	}
 
 	return "fail to display views (form main model)"
