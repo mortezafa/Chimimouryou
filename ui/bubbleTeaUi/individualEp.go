@@ -29,6 +29,12 @@ type (
 	epLinkErrMsg struct{ err error }
 )
 
+type playLinkMsg struct {
+	url string
+}
+type mpvFinishedMsg struct {
+	err error
+}
 
 func NewIndivEpModel() *indivEpModel {
 	return &indivEpModel{
@@ -69,12 +75,28 @@ func (m indivEpModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 				}
 			}
 			return m, func() tea.Msg {
-				err := runMPV(url)
-				m.mpvRan = false
-				utils.CheckErr(err)
-				return nil
+				return playLinkMsg{url: url}
 			}
 		}
+		return m, nil
+	case playLinkMsg:
+		url := msg.url
+		return m, func() tea.Msg {
+			err := runMPV(url)
+			return mpvFinishedMsg{err: err}
+		}
+	case mpvFinishedMsg:
+		newM := m
+		if msg.err != nil {
+			newM.err = msg.err
+		}
+		newM.mpvRan = false
+		return newM, nil
+
+	case epLinkErrMsg:
+		newM := m
+		newM.err = msg.err
+		return newM, nil
 		
 	}
 	var cmd tea.Cmd
@@ -83,12 +105,16 @@ func (m indivEpModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 }
 
 func (m indivEpModel) View() string  {
+	if m.err != nil {
+		return fmt.Sprintf("Error: %v\nPress 'b' to go back.", m.err)
+	}
 	if m.loading {
 		return "Fetching Video..."
 	}
-	
-	return "Playing Video!"
-	
+	if m.mpvRan {
+		return "Playing Video in MPV..."
+	}
+	return "Press 'b' to go back. (Not currently playing anything)"
 }
 
 
@@ -129,25 +155,14 @@ func getEpisodeLinks(epID string) ([]episodeLinks, error) {
 }
 
 func runMPV(link string) error {
-	// Example: Use the anime's ID or title as a parameter for MPV
 	mpvCommand := exec.Command("mpv", fmt.Sprintf("%s", link), "--fs")
 
-
-
-	// Start the command
 	err := mpvCommand.Run()
 	if err != nil {
 		log.Printf("Failed to start MPV: %v", err)
 		return err
 	}
 
-	// Optionally wait for the command to finish (or run in the background)
-	//go func() {
-	//	err = mpvCommand.Wait()
-	//	if err != nil {
-	//		log.Printf("MPV exited with error: %v", err)
-	//	}
-	//}()
 	return nil
 }
 

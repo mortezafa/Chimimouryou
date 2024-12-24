@@ -74,6 +74,10 @@ func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.episodeModel, cmd = m.episodeModel.(episodeModel).SetAnimeId(animeId, animeName)
 			cmds = append(cmds, cmd, tea.WindowSize())
 		}
+		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "b" || keyMsg.String() == "left" {
+			m.state = searchAPage
+			m.searchModel, cmd = m.searchModel.Update(msg)
+		}
 	case episodePage:
 		m.episodeModel, cmd = m.episodeModel.Update(msg)
 		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "enter" {
@@ -83,8 +87,17 @@ func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.linkModel, cmd = m.linkModel.(indivEpModel).playLink(epId)
 			cmds = append(cmds, cmd, tea.WindowSize())
 		}
+		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "b" || keyMsg.String() == "left" {
+			m.state = animePage
+			m.episodeModel, cmd = m.episodeModel.Update(msg)
+		}
 	case link:
 		m.linkModel, cmd = m.linkModel.Update(msg)
+		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "b" || keyMsg.String() == "left" {
+			m.state = episodePage
+			m.linkModel, cmd = m.linkModel.Update(msg)
+		}
+		
 	}
 	cmds = append(cmds, cmd)
 	return m, tea.Batch(cmds...)
@@ -101,7 +114,7 @@ func (m MainModel) View() string {
 	case link: return m.linkModel.View()
 	}
 
-	return "fail to display views (form main model)"
+	return "fail to display views (from main model)"
 }
 
 func Main() {
