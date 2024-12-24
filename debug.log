@@ -2297,3 +2297,53 @@ debug 2024/12/23 21:47:24 about to return Results
 debug 2024/12/23 21:47:24 about to return Results
 debug 2024/12/23 21:47:25 EPISODE ID: kimetsu-no-yaiba-hashira-geiko-hen-episode-4
 debug 2024/12/23 21:47:45 EPISODE ID: kimetsu-no-yaiba-hashira-geiko-hen-episode-7
+debug 2024/12/23 21:52:04 searchValue: ojarumaru
+debug 2024/12/23 21:52:04 poo true
+debug 2024/12/23 21:52:04 poo true
+debug 2024/12/23 21:52:04 poo true
+debug 2024/12/23 21:52:04 poo true
+debug 2024/12/23 21:52:05 about to return Results
+debug 2024/12/23 21:52:05 Search Results: []
+debug 2024/12/23 21:52:05 Current Anime List when NewResults is called
+debug 2024/12/23 21:52:05 poo false
+debug 2024/12/23 21:52:20 searchValue: ojarumaru
+debug 2024/12/23 21:52:20 poo true
+debug 2024/12/23 21:52:20 poo true
+debug 2024/12/23 21:52:20 poo true
+debug 2024/12/23 21:52:20 poo true
+debug 2024/12/23 21:52:21 about to return Results
+debug 2024/12/23 21:52:21 Search Results: []
+debug 2024/12/23 21:52:21 Current Anime List when NewResults is called
+debug 2024/12/23 21:52:21 poo false
+debug 2024/12/23 21:54:14 poo false
+debug 2024/12/23 21:54:14 poo false
+debug 2024/12/23 21:55:13 searchValue: attack on titan
+debug 2024/12/23 21:55:13 poo true
+debug 2024/12/23 21:55:13 poo true
+debug 2024/12/23 21:55:13 poo true
+debug 2024/12/23 21:55:13 poo true
+debug 2024/12/23 21:55:14 about to return Results
+debug 2024/12/23 21:55:14 Search Results: [{Shingeki no Kyojin shingeki-no-kyojin shingeki-no-kyojin} {Shingeki no Kyojin OVA shingeki-no-kyojin-ova shingeki-no-kyojin-ova} {Shingeki no Kyojin (Dub) shingeki-no-kyojin-dub shingeki-no-kyojin-dub} {Shingeki no Kyojin Season 2 shingeki-no-kyojin-season-2 shingeki-no-kyojin-season-2} {Shingeki! Kyojin Chuugakkou shingeki-kyojin-chuugakkou shingeki-kyojin-chuugakkou} {Shingeki no Kyojin Season 3 shingeki-no-kyojin-season-3 shingeki-no-kyojin-season-3} {Shingeki no Kyojin OVA (Dub) shingeki-no-kyojin-ova-dub shingeki-no-kyojin-ova-dub} {Shingeki no Kyojin: Chronicle shingeki-no-kyojin-chronicle shingeki-no-kyojin-chronicle} {Shingeki no Kyojin Season 2 (Dub) shingeki-no-kyojin-season-2-dub shingeki-no-kyojin-season-2-dub} {Shingeki! Kyojin Chuugakkou (Dub) shingeki-kyojin-chuugakkou-dub shingeki-kyojin-chuugakkou-dub} {Shingeki no Kyojin Season 3 (Dub) shingeki-no-kyojin-season-3-dub shingeki-no-kyojin-season-3-dub} {Shingeki no Kyojin Season 3 Part 2 shingeki-no-kyojin-season-3-part-2 shingeki-no-kyojin-season-3-part-2} {Shingeki no Kyojin: Chronicle (Dub) shingeki-no-kyojin-chronicle-dub shingeki-no-kyojin-chronicle-dub} {Shingeki no Kyojin: Lost Girls (Dub) shingeki-no-kyojin-lost-girls-dub shingeki-no-kyojin-lost-girls-dub} {Shingeki no Kyojin: The Final Season shingeki-no-kyojin-the-final-season shingeki-no-kyojin-the-final-season} {Shingeki no Kyojin Season 3 Part 2 (Dub) shingeki-no-kyojin-season-3-part-2-dub shingeki-no-kyojin-season-3-part-2-dub} {Shingeki no Kyojin: Kuinaki Sentaku (Dub) shingeki-no-kyojin-kuinaki-sentaku-dub shingeki-no-kyojin-kuinaki-sentaku-dub} {Shingeki no Kyojin: The Final Season (Dub) shingeki-no-kyojin-the-final-season-dub shingeki-no-kyojin-the-final-season-dub} {Shingeki no Kyojin: The Final Season Part 2 shingeki-no-kyojin-the-final-season-part-2 shingeki-no-kyojin-the-final-season-part-2} {Shingeki no Kyojin Movie 1: Guren no Yumiya shingeki-no-kyojin-movie-1-guren-no-yumiya shingeki-no-kyojin-movie-1-guren-no-yumiya}]
+debug 2024/12/23 21:55:14 Current Anime List when NewResults is called
+debug 2024/12/23 21:55:14 poo false
+debug 2024/12/23 21:55:17 poo false
+debug 2024/12/23 21:55:17 poo false
+debug 2024/12/23 21:55:17 poo false
+debug 2024/12/23 21:55:17 poo false
+debug 2024/12/23 21:55:17 poo false
+debug 2024/12/23 21:55:18 poo false
+debug 2024/12/23 21:55:18 poo false
+debug 2024/12/23 21:55:18 poo false
+debug 2024/12/23 21:55:19 poo false
+debug 2024/12/23 21:55:19 poo false
+debug 2024/12/23 21:55:19 poo false
+debug 2024/12/23 21:55:19 poo false
+debug 2024/12/23 21:55:19 poo false
+debug 2024/12/23 21:55:19 poo false
+debug 2024/12/23 21:55:20 poo false
+debug 2024/12/23 21:55:20 Anime Id from main shingeki-no-kyojin
+debug 2024/12/23 21:55:20 EPISODE ID: shingeki-no-kyojin
+debug 2024/12/23 21:55:21 about to return Results
+debug 2024/12/23 21:55:21 about to return Results
+debug 2024/12/23 21:55:23 EPISODE ID: shingeki-no-kyojin-episode-1
+debug 2024/12/23 21:55:48 EPISODE ID: shingeki-no-kyojin-episode-6
