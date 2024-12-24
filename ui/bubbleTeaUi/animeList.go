@@ -12,14 +12,13 @@ package bubbleTeaUi
 
 import (
 	"Chimimouryou/JsonsStrcuts"
+	"Chimimouryou/utils"
 	"encoding/json"
 	"fmt"
 	"github.com/charmbracelet/bubbles/list"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"io"
 	"log"
-	"net/http"
 )
 
 var docStyle = lipgloss.NewStyle().Margin(1, 0)
@@ -27,6 +26,8 @@ var docStyle = lipgloss.NewStyle().Margin(1, 0)
 type animeModel struct {
 	animeList list.Model
 	searchTerm string
+	animeID string
+	selectedAnimeName string
 	err       error
 	loading   bool
 }
@@ -47,11 +48,11 @@ func NewResultsModel() *animeModel {
 
 	d := list.NewDefaultDelegate()
 	d.ShowDescription = false
-	d.Styles.SelectedTitle = lipgloss.NewStyle().BorderStyle(lipgloss.RoundedBorder()).Foreground(lipgloss.Color("#EF6461"))
+	d.Styles.SelectedTitle = lipgloss.NewStyle().BorderStyle(lipgloss.RoundedBorder()).Foreground(lipgloss.Color("#e82017"))
 	d.Styles.NormalTitle = lipgloss.NewStyle().BorderForeground(lipgloss.Color("192")).PaddingLeft(3)
 
 	l := list.New(items, d, 0, 0)
-	l.Styles.Title = lipgloss.NewStyle().Foreground(lipgloss.Color("#cacccf")).Background(lipgloss.Color("#EF6461"))
+	l.Styles.Title = lipgloss.NewStyle().Foreground(lipgloss.Color("#cacccf")).Background(lipgloss.Color("#e82017"))
 
 	l.SetShowStatusBar(false)
 
@@ -77,7 +78,7 @@ func searchAnime(name string) ([]animes, error) {
 	var fullUrl string
 	fullUrl = fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", name)
 
-	resp, err := fetchJsonData(fullUrl)
+	resp, err := utils.FetchJsonData(fullUrl)
 
 	var animeSearchQuery JsonsStrcuts.AnimeSearchQuery
 	err = json.Unmarshal(resp, &animeSearchQuery)
@@ -106,24 +107,7 @@ func (m animeModel) SetSearchTerm(term string) (animeModel, tea.Cmd) {
 	return m, fetchSearchResults(term)
 }
 
-func fetchJsonData(fullUrl string) ([]byte, error) {
 
-	resp, err := http.Get(fullUrl)
-	if err != nil {
-		fmt.Errorf("Failed to make the request: %v", err)
-	}
-	//defer resp.Body.Close()
-
-	if resp.StatusCode != http.StatusOK {
-		fmt.Errorf("Request failed with status: %s", resp.Status)
-	}
-
-	body, err := io.ReadAll(resp.Body)
-	if err != nil {
-		fmt.Errorf("Failed to read the response body: %v", err)
-	}
-	return body, nil
-}
 
 func (a animes) Title() string       { return a.title }
 func (a animes) Description() string { return "" }
@@ -139,6 +123,11 @@ func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 	case tea.KeyMsg:
 		if msg.String() == "ctrl+c" {
 			return m, tea.Quit
+		}
+		if msg.String() == "enter" {
+			m.animeID = m.animeList.SelectedItem().(animes).id
+			m.selectedAnimeName = m.animeList.SelectedItem().(animes).title
+			return m, nil
 		}
 	case tea.WindowSizeMsg:
 		h, v := docStyle.GetFrameSize()

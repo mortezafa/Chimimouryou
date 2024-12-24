@@ -1308,3 +1308,503 @@ debug 2024/12/23 12:58:06 Current Anime List when NewResults is called
 debug 2024/12/23 12:58:06 poo false
 debug 2024/12/23 12:58:06 poo false
 debug 2024/12/23 12:58:07 poo false
+debug 2024/12/23 13:07:45 searchValue: Tokyo Ghoul
+debug 2024/12/23 13:07:45 poo true
+debug 2024/12/23 13:07:45 poo true
+debug 2024/12/23 13:07:45 poo true
+debug 2024/12/23 13:07:45 poo true
+debug 2024/12/23 13:07:46 about to return Results
+debug 2024/12/23 13:07:46 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 13:07:46 Current Anime List when NewResults is called
+debug 2024/12/23 13:07:46 poo false
+debug 2024/12/23 13:07:47 poo false
+debug 2024/12/23 13:07:47 poo false
+debug 2024/12/23 13:07:47 poo false
+debug 2024/12/23 13:07:47 poo false
+debug 2024/12/23 14:38:31 searchValue: Jujutsu Kaisen
+debug 2024/12/23 14:38:31 poo true
+debug 2024/12/23 14:38:31 poo true
+debug 2024/12/23 14:38:31 poo true
+debug 2024/12/23 14:38:31 poo true
+debug 2024/12/23 14:38:32 about to return Results
+debug 2024/12/23 14:38:32 Search Results: [{Jujutsu Kaisen 0 jujutsu-kaisen-0 jujutsu-kaisen-0} {Jujutsu Kaisen (TV) jujutsu-kaisen-tv jujutsu-kaisen-tv} {Jujutsu Kaisen 0 (Dub) jujutsu-kaisen-0-dub jujutsu-kaisen-0-dub} {Jujutsu Kaisen (TV) (Dub) jujutsu-kaisen-tv-dub jujutsu-kaisen-tv-dub} {Jujutsu Kaisen 2nd Season jujutsu-kaisen-tv-2nd-season jujutsu-kaisen-tv-2nd-season} {Jujutsu Kaisen 2nd Season (Dub) jujutsu-kaisen-2nd-season-dub jujutsu-kaisen-2nd-season-dub} {Jujutsu Kaisen 2nd Season Special jujutsu-kaisen-2nd-season-special jujutsu-kaisen-2nd-season-special}]
+debug 2024/12/23 14:38:32 Current Anime List when NewResults is called
+debug 2024/12/23 14:38:32 poo false
+debug 2024/12/23 14:38:33 poo false
+debug 2024/12/23 14:38:34 poo false
+debug 2024/12/23 14:38:34 poo false
+debug 2024/12/23 14:38:34 poo false
+debug 2024/12/23 14:38:35 poo false
+debug 2024/12/23 14:38:35 poo false
+debug 2024/12/23 14:38:35 poo false
+debug 2024/12/23 14:38:35 poo false
+debug 2024/12/23 14:38:35 poo false
+debug 2024/12/23 14:38:36 poo false
+debug 2024/12/23 14:38:36 poo false
+debug 2024/12/23 14:38:36 poo false
+debug 2024/12/23 14:38:37 poo false
+debug 2024/12/23 14:38:37 poo false
+debug 2024/12/23 14:38:38 poo false
+debug 2024/12/23 14:38:39 poo false
+debug 2024/12/23 14:38:39 poo false
+debug 2024/12/23 14:38:42 poo false
+debug 2024/12/23 15:39:54 searchValue: Chainsaw Man
+debug 2024/12/23 15:39:54 poo true
+debug 2024/12/23 15:39:54 poo true
+debug 2024/12/23 15:39:54 poo true
+debug 2024/12/23 15:39:55 poo true
+debug 2024/12/23 15:39:55 about to return Results
+debug 2024/12/23 15:39:55 Search Results: [{Chainsaw Man chainsaw-man chainsaw-man} {Chainsaw Man (Dub) chainsaw-man-dub chainsaw-man-dub}]
+debug 2024/12/23 15:39:55 Current Anime List when NewResults is called
+debug 2024/12/23 15:39:55 poo false
+debug 2024/12/23 15:41:21 searchValue: Naruto
+debug 2024/12/23 15:41:21 poo true
+debug 2024/12/23 15:41:21 poo true
+debug 2024/12/23 15:41:21 poo true
+debug 2024/12/23 15:41:21 poo true
+debug 2024/12/23 15:41:22 about to return Results
+debug 2024/12/23 15:41:22 Search Results: [{Naruto naruto naruto} {Naruto (Dub) naruto-dub naruto-dub} {Naruto Shippuden naruto-shippuden naruto-shippuden} {Naruto Shippuden (Dub) naruto-shippuuden-dub naruto-shippuuden-dub} {Boruto: Naruto the Movie boruto-naruto-the-movie boruto-naruto-the-movie} {Naruto Shippuden Movie 1 naruto-shippuuden-movie-1 naruto-shippuuden-movie-1} {Boruto: Naruto the Movie (Dub) boruto-naruto-the-movie-dub boruto-naruto-the-movie-dub} {Boruto: Naruto Next Generations boruto-naruto-next-generations boruto-naruto-next-generations} {Naruto: Shippuuden Movie 1 (Dub) naruto-shippuuden-movie-1-dub naruto-shippuuden-movie-1-dub} {Naruto Shippuden Movie 5 Special naruto-shippuden-movie-5-special naruto-shippuden-movie-5-special} {The Last: Naruto the Movie (Dub) the-last-naruto-the-movie-dub the-last-naruto-the-movie-dub} {Naruto Shippuden Movie 2: Kizuna naruto-shippuuden-movie-2-kizuna naruto-shippuuden-movie-2-kizuna} {Naruto Shippuden Movie 7: The Last naruto-shippuuden-movie-7-the-last naruto-shippuuden-movie-7-the-last} {Naruto Shippuden: Sunny Side Battle naruto-shippuuden-sunny-side-battle naruto-shippuuden-sunny-side-battle} {Boruto: Naruto Next Generations (Dub) boruto-naruto-next-generations-dub boruto-naruto-next-generations-dub} {Naruto Shippuden Movie 5: Blood Prison naruto-shippuuden-movie-5-blood-prison naruto-shippuuden-movie-5-blood-prison} {Naruto Shippuden Movie 6: Road to Ninja naruto-shippuuden-movie-6-road-to-ninja naruto-shippuuden-movie-6-road-to-ninja} {Naruto Shippuden Movie 4: The Lost Tower naruto-shippuuden-movie-4-the-lost-tower naruto-shippuuden-movie-4-the-lost-tower} {Naruto: Shippuuden Movie 2 - Kizuna (Dub) naruto-shippuuden-movie-2-kizuna-dub naruto-shippuuden-movie-2-kizuna-dub} {Naruto: Akaki Yotsuba no Clover wo Sagase naruto-akaki-yotsuba-no-clover-wo-sagase naruto-akaki-yotsuba-no-clover-wo-sagase}]
+debug 2024/12/23 15:41:22 Current Anime List when NewResults is called
+debug 2024/12/23 15:41:22 poo false
+debug 2024/12/23 15:41:23 poo false
+debug 2024/12/23 15:41:23 poo false
+debug 2024/12/23 15:51:15 searchValue: Naruto
+debug 2024/12/23 15:51:15 poo true
+debug 2024/12/23 15:51:15 poo true
+debug 2024/12/23 15:51:15 poo true
+debug 2024/12/23 15:51:15 poo true
+debug 2024/12/23 15:51:16 about to return Results
+debug 2024/12/23 15:51:16 Search Results: [{Naruto naruto naruto} {Naruto (Dub) naruto-dub naruto-dub} {Naruto Shippuden naruto-shippuden naruto-shippuden} {Naruto Shippuden (Dub) naruto-shippuuden-dub naruto-shippuuden-dub} {Boruto: Naruto the Movie boruto-naruto-the-movie boruto-naruto-the-movie} {Naruto Shippuden Movie 1 naruto-shippuuden-movie-1 naruto-shippuuden-movie-1} {Boruto: Naruto the Movie (Dub) boruto-naruto-the-movie-dub boruto-naruto-the-movie-dub} {Boruto: Naruto Next Generations boruto-naruto-next-generations boruto-naruto-next-generations} {Naruto: Shippuuden Movie 1 (Dub) naruto-shippuuden-movie-1-dub naruto-shippuuden-movie-1-dub} {Naruto Shippuden Movie 5 Special naruto-shippuden-movie-5-special naruto-shippuden-movie-5-special} {The Last: Naruto the Movie (Dub) the-last-naruto-the-movie-dub the-last-naruto-the-movie-dub} {Naruto Shippuden Movie 2: Kizuna naruto-shippuuden-movie-2-kizuna naruto-shippuuden-movie-2-kizuna} {Naruto Shippuden Movie 7: The Last naruto-shippuuden-movie-7-the-last naruto-shippuuden-movie-7-the-last} {Naruto Shippuden: Sunny Side Battle naruto-shippuuden-sunny-side-battle naruto-shippuuden-sunny-side-battle} {Boruto: Naruto Next Generations (Dub) boruto-naruto-next-generations-dub boruto-naruto-next-generations-dub} {Naruto Shippuden Movie 5: Blood Prison naruto-shippuuden-movie-5-blood-prison naruto-shippuuden-movie-5-blood-prison} {Naruto Shippuden Movie 6: Road to Ninja naruto-shippuuden-movie-6-road-to-ninja naruto-shippuuden-movie-6-road-to-ninja} {Naruto Shippuden Movie 4: The Lost Tower naruto-shippuuden-movie-4-the-lost-tower naruto-shippuuden-movie-4-the-lost-tower} {Naruto: Shippuuden Movie 2 - Kizuna (Dub) naruto-shippuuden-movie-2-kizuna-dub naruto-shippuuden-movie-2-kizuna-dub} {Naruto: Akaki Yotsuba no Clover wo Sagase naruto-akaki-yotsuba-no-clover-wo-sagase naruto-akaki-yotsuba-no-clover-wo-sagase}]
+debug 2024/12/23 15:51:16 Current Anime List when NewResults is called
+debug 2024/12/23 15:51:16 poo false
+debug 2024/12/23 15:51:17 poo false
+debug 2024/12/23 15:51:17 poo false
+debug 2024/12/23 15:51:17 poo false
+debug 2024/12/23 15:51:17 poo false
+debug 2024/12/23 15:51:18 poo false
+debug 2024/12/23 15:51:18 poo false
+debug 2024/12/23 15:58:21 searchValue: Naruto
+debug 2024/12/23 15:58:21 poo true
+debug 2024/12/23 15:58:21 poo true
+debug 2024/12/23 15:58:21 poo true
+debug 2024/12/23 15:58:21 poo true
+debug 2024/12/23 15:58:22 about to return Results
+debug 2024/12/23 15:58:22 Search Results: [{Naruto naruto naruto} {Naruto (Dub) naruto-dub naruto-dub} {Naruto Shippuden naruto-shippuden naruto-shippuden} {Naruto Shippuden (Dub) naruto-shippuuden-dub naruto-shippuuden-dub} {Boruto: Naruto the Movie boruto-naruto-the-movie boruto-naruto-the-movie} {Naruto Shippuden Movie 1 naruto-shippuuden-movie-1 naruto-shippuuden-movie-1} {Boruto: Naruto the Movie (Dub) boruto-naruto-the-movie-dub boruto-naruto-the-movie-dub} {Boruto: Naruto Next Generations boruto-naruto-next-generations boruto-naruto-next-generations} {Naruto: Shippuuden Movie 1 (Dub) naruto-shippuuden-movie-1-dub naruto-shippuuden-movie-1-dub} {Naruto Shippuden Movie 5 Special naruto-shippuden-movie-5-special naruto-shippuden-movie-5-special} {The Last: Naruto the Movie (Dub) the-last-naruto-the-movie-dub the-last-naruto-the-movie-dub} {Naruto Shippuden Movie 2: Kizuna naruto-shippuuden-movie-2-kizuna naruto-shippuuden-movie-2-kizuna} {Naruto Shippuden Movie 7: The Last naruto-shippuuden-movie-7-the-last naruto-shippuuden-movie-7-the-last} {Naruto Shippuden: Sunny Side Battle naruto-shippuuden-sunny-side-battle naruto-shippuuden-sunny-side-battle} {Boruto: Naruto Next Generations (Dub) boruto-naruto-next-generations-dub boruto-naruto-next-generations-dub} {Naruto Shippuden Movie 5: Blood Prison naruto-shippuuden-movie-5-blood-prison naruto-shippuuden-movie-5-blood-prison} {Naruto Shippuden Movie 6: Road to Ninja naruto-shippuuden-movie-6-road-to-ninja naruto-shippuuden-movie-6-road-to-ninja} {Naruto Shippuden Movie 4: The Lost Tower naruto-shippuuden-movie-4-the-lost-tower naruto-shippuuden-movie-4-the-lost-tower} {Naruto: Shippuuden Movie 2 - Kizuna (Dub) naruto-shippuuden-movie-2-kizuna-dub naruto-shippuuden-movie-2-kizuna-dub} {Naruto: Akaki Yotsuba no Clover wo Sagase naruto-akaki-yotsuba-no-clover-wo-sagase naruto-akaki-yotsuba-no-clover-wo-sagase}]
+debug 2024/12/23 15:58:22 Current Anime List when NewResults is called
+debug 2024/12/23 15:58:22 poo false
+debug 2024/12/23 15:58:22 poo false
+debug 2024/12/23 15:58:23 poo false
+debug 2024/12/23 16:01:07 searchValue: naruto
+debug 2024/12/23 16:01:07 poo true
+debug 2024/12/23 16:01:07 poo true
+debug 2024/12/23 16:01:07 poo true
+debug 2024/12/23 16:01:08 poo true
+debug 2024/12/23 16:01:08 about to return Results
+debug 2024/12/23 16:01:08 Search Results: [{Naruto naruto naruto} {Naruto (Dub) naruto-dub naruto-dub} {Naruto Shippuden naruto-shippuden naruto-shippuden} {Naruto Shippuden (Dub) naruto-shippuuden-dub naruto-shippuuden-dub} {Boruto: Naruto the Movie boruto-naruto-the-movie boruto-naruto-the-movie} {Naruto Shippuden Movie 1 naruto-shippuuden-movie-1 naruto-shippuuden-movie-1} {Boruto: Naruto the Movie (Dub) boruto-naruto-the-movie-dub boruto-naruto-the-movie-dub} {Boruto: Naruto Next Generations boruto-naruto-next-generations boruto-naruto-next-generations} {Naruto: Shippuuden Movie 1 (Dub) naruto-shippuuden-movie-1-dub naruto-shippuuden-movie-1-dub} {Naruto Shippuden Movie 5 Special naruto-shippuden-movie-5-special naruto-shippuden-movie-5-special} {The Last: Naruto the Movie (Dub) the-last-naruto-the-movie-dub the-last-naruto-the-movie-dub} {Naruto Shippuden Movie 2: Kizuna naruto-shippuuden-movie-2-kizuna naruto-shippuuden-movie-2-kizuna} {Naruto Shippuden Movie 7: The Last naruto-shippuuden-movie-7-the-last naruto-shippuuden-movie-7-the-last} {Naruto Shippuden: Sunny Side Battle naruto-shippuuden-sunny-side-battle naruto-shippuuden-sunny-side-battle} {Boruto: Naruto Next Generations (Dub) boruto-naruto-next-generations-dub boruto-naruto-next-generations-dub} {Naruto Shippuden Movie 5: Blood Prison naruto-shippuuden-movie-5-blood-prison naruto-shippuuden-movie-5-blood-prison} {Naruto Shippuden Movie 6: Road to Ninja naruto-shippuuden-movie-6-road-to-ninja naruto-shippuuden-movie-6-road-to-ninja} {Naruto Shippuden Movie 4: The Lost Tower naruto-shippuuden-movie-4-the-lost-tower naruto-shippuuden-movie-4-the-lost-tower} {Naruto: Shippuuden Movie 2 - Kizuna (Dub) naruto-shippuuden-movie-2-kizuna-dub naruto-shippuuden-movie-2-kizuna-dub} {Naruto: Akaki Yotsuba no Clover wo Sagase naruto-akaki-yotsuba-no-clover-wo-sagase naruto-akaki-yotsuba-no-clover-wo-sagase}]
+debug 2024/12/23 16:01:08 Current Anime List when NewResults is called
+debug 2024/12/23 16:01:08 poo false
+debug 2024/12/23 16:01:09 poo false
+debug 2024/12/23 16:01:09 poo false
+debug 2024/12/23 16:01:10 about to return Results
+debug 2024/12/23 16:01:10 about to return Results
+debug 2024/12/23 16:02:50 searchValue: Tokyo Ghoul
+debug 2024/12/23 16:02:50 poo true
+debug 2024/12/23 16:02:50 poo true
+debug 2024/12/23 16:02:50 poo true
+debug 2024/12/23 16:02:50 poo true
+debug 2024/12/23 16:02:51 about to return Results
+debug 2024/12/23 16:02:51 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 16:02:51 Current Anime List when NewResults is called
+debug 2024/12/23 16:02:51 poo false
+debug 2024/12/23 16:02:52 EPISODE ID: 
+debug 2024/12/23 16:02:53 about to return Results
+debug 2024/12/23 16:02:53 about to return Results
+debug 2024/12/23 16:04:04 searchValue: Tokyo Ghoul
+debug 2024/12/23 16:04:04 poo true
+debug 2024/12/23 16:04:04 poo true
+debug 2024/12/23 16:04:04 poo true
+debug 2024/12/23 16:04:04 poo true
+debug 2024/12/23 16:04:05 about to return Results
+debug 2024/12/23 16:04:05 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 16:04:05 Current Anime List when NewResults is called
+debug 2024/12/23 16:04:05 poo false
+debug 2024/12/23 16:04:06 Anime Id from main 
+debug 2024/12/23 16:04:06 EPISODE ID: 
+debug 2024/12/23 16:04:08 about to return Results
+debug 2024/12/23 16:04:08 about to return Results
+debug 2024/12/23 16:13:21 searchValue: Naruto
+debug 2024/12/23 16:13:21 poo true
+debug 2024/12/23 16:13:21 poo true
+debug 2024/12/23 16:13:21 poo true
+debug 2024/12/23 16:13:21 poo true
+debug 2024/12/23 16:13:22 about to return Results
+debug 2024/12/23 16:13:22 Search Results: [{Naruto naruto naruto} {Naruto (Dub) naruto-dub naruto-dub} {Naruto Shippuden naruto-shippuden naruto-shippuden} {Naruto Shippuden (Dub) naruto-shippuuden-dub naruto-shippuuden-dub} {Boruto: Naruto the Movie boruto-naruto-the-movie boruto-naruto-the-movie} {Naruto Shippuden Movie 1 naruto-shippuuden-movie-1 naruto-shippuuden-movie-1} {Boruto: Naruto the Movie (Dub) boruto-naruto-the-movie-dub boruto-naruto-the-movie-dub} {Boruto: Naruto Next Generations boruto-naruto-next-generations boruto-naruto-next-generations} {Naruto: Shippuuden Movie 1 (Dub) naruto-shippuuden-movie-1-dub naruto-shippuuden-movie-1-dub} {Naruto Shippuden Movie 5 Special naruto-shippuden-movie-5-special naruto-shippuden-movie-5-special} {The Last: Naruto the Movie (Dub) the-last-naruto-the-movie-dub the-last-naruto-the-movie-dub} {Naruto Shippuden Movie 2: Kizuna naruto-shippuuden-movie-2-kizuna naruto-shippuuden-movie-2-kizuna} {Naruto Shippuden Movie 7: The Last naruto-shippuuden-movie-7-the-last naruto-shippuuden-movie-7-the-last} {Naruto Shippuden: Sunny Side Battle naruto-shippuuden-sunny-side-battle naruto-shippuuden-sunny-side-battle} {Boruto: Naruto Next Generations (Dub) boruto-naruto-next-generations-dub boruto-naruto-next-generations-dub} {Naruto Shippuden Movie 5: Blood Prison naruto-shippuuden-movie-5-blood-prison naruto-shippuuden-movie-5-blood-prison} {Naruto Shippuden Movie 6: Road to Ninja naruto-shippuuden-movie-6-road-to-ninja naruto-shippuuden-movie-6-road-to-ninja} {Naruto Shippuden Movie 4: The Lost Tower naruto-shippuuden-movie-4-the-lost-tower naruto-shippuuden-movie-4-the-lost-tower} {Naruto: Shippuuden Movie 2 - Kizuna (Dub) naruto-shippuuden-movie-2-kizuna-dub naruto-shippuuden-movie-2-kizuna-dub} {Naruto: Akaki Yotsuba no Clover wo Sagase naruto-akaki-yotsuba-no-clover-wo-sagase naruto-akaki-yotsuba-no-clover-wo-sagase}]
+debug 2024/12/23 16:13:22 Current Anime List when NewResults is called
+debug 2024/12/23 16:13:22 poo false
+debug 2024/12/23 16:13:23 Anime Id from main 
+debug 2024/12/23 16:13:23 EPISODE ID: 
+debug 2024/12/23 16:13:23 about to return Results
+debug 2024/12/23 16:13:23 about to return Results
+debug 2024/12/23 16:14:50 searchValue: Naruto
+debug 2024/12/23 16:14:50 poo true
+debug 2024/12/23 16:14:50 poo true
+debug 2024/12/23 16:14:50 poo true
+debug 2024/12/23 16:14:50 poo true
+debug 2024/12/23 16:14:51 about to return Results
+debug 2024/12/23 16:14:51 Search Results: [{Naruto naruto naruto} {Naruto (Dub) naruto-dub naruto-dub} {Naruto Shippuden naruto-shippuden naruto-shippuden} {Naruto Shippuden (Dub) naruto-shippuuden-dub naruto-shippuuden-dub} {Boruto: Naruto the Movie boruto-naruto-the-movie boruto-naruto-the-movie} {Naruto Shippuden Movie 1 naruto-shippuuden-movie-1 naruto-shippuuden-movie-1} {Boruto: Naruto the Movie (Dub) boruto-naruto-the-movie-dub boruto-naruto-the-movie-dub} {Boruto: Naruto Next Generations boruto-naruto-next-generations boruto-naruto-next-generations} {Naruto: Shippuuden Movie 1 (Dub) naruto-shippuuden-movie-1-dub naruto-shippuuden-movie-1-dub} {Naruto Shippuden Movie 5 Special naruto-shippuden-movie-5-special naruto-shippuden-movie-5-special} {The Last: Naruto the Movie (Dub) the-last-naruto-the-movie-dub the-last-naruto-the-movie-dub} {Naruto Shippuden Movie 2: Kizuna naruto-shippuuden-movie-2-kizuna naruto-shippuuden-movie-2-kizuna} {Naruto Shippuden Movie 7: The Last naruto-shippuuden-movie-7-the-last naruto-shippuuden-movie-7-the-last} {Naruto Shippuden: Sunny Side Battle naruto-shippuuden-sunny-side-battle naruto-shippuuden-sunny-side-battle} {Boruto: Naruto Next Generations (Dub) boruto-naruto-next-generations-dub boruto-naruto-next-generations-dub} {Naruto Shippuden Movie 5: Blood Prison naruto-shippuuden-movie-5-blood-prison naruto-shippuuden-movie-5-blood-prison} {Naruto Shippuden Movie 6: Road to Ninja naruto-shippuuden-movie-6-road-to-ninja naruto-shippuuden-movie-6-road-to-ninja} {Naruto Shippuden Movie 4: The Lost Tower naruto-shippuuden-movie-4-the-lost-tower naruto-shippuuden-movie-4-the-lost-tower} {Naruto: Shippuuden Movie 2 - Kizuna (Dub) naruto-shippuuden-movie-2-kizuna-dub naruto-shippuuden-movie-2-kizuna-dub} {Naruto: Akaki Yotsuba no Clover wo Sagase naruto-akaki-yotsuba-no-clover-wo-sagase naruto-akaki-yotsuba-no-clover-wo-sagase}]
+debug 2024/12/23 16:14:51 Current Anime List when NewResults is called
+debug 2024/12/23 16:14:51 poo false
+debug 2024/12/23 16:14:52 Anime Id from main naruto
+debug 2024/12/23 16:14:52 EPISODE ID: naruto
+debug 2024/12/23 16:14:53 about to return Results
+debug 2024/12/23 16:14:53 about to return Results
+debug 2024/12/23 16:16:27 searchValue: Tokyo Ghoul
+debug 2024/12/23 16:16:27 poo true
+debug 2024/12/23 16:16:27 poo true
+debug 2024/12/23 16:16:27 poo true
+debug 2024/12/23 16:16:27 poo true
+debug 2024/12/23 16:16:28 about to return Results
+debug 2024/12/23 16:16:28 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 16:16:28 Current Anime List when NewResults is called
+debug 2024/12/23 16:16:28 poo false
+debug 2024/12/23 16:16:37 Anime Id from main tokyo-ghoul
+debug 2024/12/23 16:16:37 EPISODE ID: tokyo-ghoul
+debug 2024/12/23 16:16:39 about to return Results
+debug 2024/12/23 16:16:39 about to return Results
+debug 2024/12/23 16:16:53 searchValue: Chainsaw Man
+debug 2024/12/23 16:16:53 poo true
+debug 2024/12/23 16:16:53 poo true
+debug 2024/12/23 16:16:53 poo true
+debug 2024/12/23 16:16:54 poo true
+debug 2024/12/23 16:16:54 about to return Results
+debug 2024/12/23 16:16:54 Search Results: [{Chainsaw Man chainsaw-man chainsaw-man} {Chainsaw Man (Dub) chainsaw-man-dub chainsaw-man-dub}]
+debug 2024/12/23 16:16:54 Current Anime List when NewResults is called
+debug 2024/12/23 16:16:54 poo false
+debug 2024/12/23 16:16:56 Anime Id from main chainsaw-man
+debug 2024/12/23 16:16:56 EPISODE ID: chainsaw-man
+debug 2024/12/23 16:16:57 about to return Results
+debug 2024/12/23 16:16:57 about to return Results
+debug 2024/12/23 16:22:02 searchValue: naruto
+debug 2024/12/23 16:22:02 poo true
+debug 2024/12/23 16:22:02 poo true
+debug 2024/12/23 16:22:02 poo true
+debug 2024/12/23 16:22:03 poo true
+debug 2024/12/23 16:22:03 about to return Results
+debug 2024/12/23 16:22:03 Search Results: [{Naruto naruto naruto} {Naruto (Dub) naruto-dub naruto-dub} {Naruto Shippuden naruto-shippuden naruto-shippuden} {Naruto Shippuden (Dub) naruto-shippuuden-dub naruto-shippuuden-dub} {Boruto: Naruto the Movie boruto-naruto-the-movie boruto-naruto-the-movie} {Naruto Shippuden Movie 1 naruto-shippuuden-movie-1 naruto-shippuuden-movie-1} {Boruto: Naruto the Movie (Dub) boruto-naruto-the-movie-dub boruto-naruto-the-movie-dub} {Boruto: Naruto Next Generations boruto-naruto-next-generations boruto-naruto-next-generations} {Naruto: Shippuuden Movie 1 (Dub) naruto-shippuuden-movie-1-dub naruto-shippuuden-movie-1-dub} {Naruto Shippuden Movie 5 Special naruto-shippuden-movie-5-special naruto-shippuden-movie-5-special} {The Last: Naruto the Movie (Dub) the-last-naruto-the-movie-dub the-last-naruto-the-movie-dub} {Naruto Shippuden Movie 2: Kizuna naruto-shippuuden-movie-2-kizuna naruto-shippuuden-movie-2-kizuna} {Naruto Shippuden Movie 7: The Last naruto-shippuuden-movie-7-the-last naruto-shippuuden-movie-7-the-last} {Naruto Shippuden: Sunny Side Battle naruto-shippuuden-sunny-side-battle naruto-shippuuden-sunny-side-battle} {Boruto: Naruto Next Generations (Dub) boruto-naruto-next-generations-dub boruto-naruto-next-generations-dub} {Naruto Shippuden Movie 5: Blood Prison naruto-shippuuden-movie-5-blood-prison naruto-shippuuden-movie-5-blood-prison} {Naruto Shippuden Movie 6: Road to Ninja naruto-shippuuden-movie-6-road-to-ninja naruto-shippuuden-movie-6-road-to-ninja} {Naruto Shippuden Movie 4: The Lost Tower naruto-shippuuden-movie-4-the-lost-tower naruto-shippuuden-movie-4-the-lost-tower} {Naruto: Shippuuden Movie 2 - Kizuna (Dub) naruto-shippuuden-movie-2-kizuna-dub naruto-shippuuden-movie-2-kizuna-dub} {Naruto: Akaki Yotsuba no Clover wo Sagase naruto-akaki-yotsuba-no-clover-wo-sagase naruto-akaki-yotsuba-no-clover-wo-sagase}]
+debug 2024/12/23 16:22:03 Current Anime List when NewResults is called
+debug 2024/12/23 16:22:03 poo false
+debug 2024/12/23 16:22:04 poo false
+debug 2024/12/23 16:22:04 poo false
+debug 2024/12/23 16:22:04 poo false
+debug 2024/12/23 16:22:05 poo false
+debug 2024/12/23 16:22:05 poo false
+debug 2024/12/23 16:22:05 poo false
+debug 2024/12/23 16:22:05 poo false
+debug 2024/12/23 16:22:06 poo false
+debug 2024/12/23 16:22:06 poo false
+debug 2024/12/23 16:22:06 poo false
+debug 2024/12/23 16:22:07 poo false
+debug 2024/12/23 16:22:07 poo false
+debug 2024/12/23 16:22:09 poo false
+debug 2024/12/23 16:22:09 poo false
+debug 2024/12/23 16:22:20 poo false
+debug 2024/12/23 16:22:20 poo false
+debug 2024/12/23 16:22:29 searchValue: Naruto
+debug 2024/12/23 16:22:29 poo true
+debug 2024/12/23 16:22:29 poo true
+debug 2024/12/23 16:22:29 poo true
+debug 2024/12/23 16:22:29 poo true
+debug 2024/12/23 16:22:30 about to return Results
+debug 2024/12/23 16:22:30 Search Results: [{Naruto naruto naruto} {Naruto (Dub) naruto-dub naruto-dub} {Naruto Shippuden naruto-shippuden naruto-shippuden} {Naruto Shippuden (Dub) naruto-shippuuden-dub naruto-shippuuden-dub} {Boruto: Naruto the Movie boruto-naruto-the-movie boruto-naruto-the-movie} {Naruto Shippuden Movie 1 naruto-shippuuden-movie-1 naruto-shippuuden-movie-1} {Boruto: Naruto the Movie (Dub) boruto-naruto-the-movie-dub boruto-naruto-the-movie-dub} {Boruto: Naruto Next Generations boruto-naruto-next-generations boruto-naruto-next-generations} {Naruto: Shippuuden Movie 1 (Dub) naruto-shippuuden-movie-1-dub naruto-shippuuden-movie-1-dub} {Naruto Shippuden Movie 5 Special naruto-shippuden-movie-5-special naruto-shippuden-movie-5-special} {The Last: Naruto the Movie (Dub) the-last-naruto-the-movie-dub the-last-naruto-the-movie-dub} {Naruto Shippuden Movie 2: Kizuna naruto-shippuuden-movie-2-kizuna naruto-shippuuden-movie-2-kizuna} {Naruto Shippuden Movie 7: The Last naruto-shippuuden-movie-7-the-last naruto-shippuuden-movie-7-the-last} {Naruto Shippuden: Sunny Side Battle naruto-shippuuden-sunny-side-battle naruto-shippuuden-sunny-side-battle} {Boruto: Naruto Next Generations (Dub) boruto-naruto-next-generations-dub boruto-naruto-next-generations-dub} {Naruto Shippuden Movie 5: Blood Prison naruto-shippuuden-movie-5-blood-prison naruto-shippuuden-movie-5-blood-prison} {Naruto Shippuden Movie 6: Road to Ninja naruto-shippuuden-movie-6-road-to-ninja naruto-shippuuden-movie-6-road-to-ninja} {Naruto Shippuden Movie 4: The Lost Tower naruto-shippuuden-movie-4-the-lost-tower naruto-shippuuden-movie-4-the-lost-tower} {Naruto: Shippuuden Movie 2 - Kizuna (Dub) naruto-shippuuden-movie-2-kizuna-dub naruto-shippuuden-movie-2-kizuna-dub} {Naruto: Akaki Yotsuba no Clover wo Sagase naruto-akaki-yotsuba-no-clover-wo-sagase naruto-akaki-yotsuba-no-clover-wo-sagase}]
+debug 2024/12/23 16:22:30 Current Anime List when NewResults is called
+debug 2024/12/23 16:22:30 poo false
+debug 2024/12/23 16:22:31 poo false
+debug 2024/12/23 16:22:31 poo false
+debug 2024/12/23 16:22:31 poo false
+debug 2024/12/23 16:22:32 poo false
+debug 2024/12/23 16:22:32 poo false
+debug 2024/12/23 16:22:32 poo false
+debug 2024/12/23 16:22:32 poo false
+debug 2024/12/23 16:22:33 poo false
+debug 2024/12/23 16:22:33 poo false
+debug 2024/12/23 16:22:33 poo false
+debug 2024/12/23 16:22:33 poo false
+debug 2024/12/23 16:22:34 poo false
+debug 2024/12/23 16:22:34 poo false
+debug 2024/12/23 16:22:34 poo false
+debug 2024/12/23 16:22:34 poo false
+debug 2024/12/23 16:22:34 poo false
+debug 2024/12/23 16:22:35 poo false
+debug 2024/12/23 16:47:36 poo false
+debug 2024/12/23 16:47:48 poo false
+debug 2024/12/23 16:47:56 poo false
+debug 2024/12/23 16:47:59 poo false
+debug 2024/12/23 16:48:01 poo false
+debug 2024/12/23 16:49:38 poo false
+debug 2024/12/23 16:49:39 poo false
+debug 2024/12/23 16:50:00 poo false
+debug 2024/12/23 16:50:04 poo false
+debug 2024/12/23 16:51:05 poo false
+debug 2024/12/23 16:51:32 poo false
+debug 2024/12/23 16:51:46 poo false
+debug 2024/12/23 16:51:46 poo false
+debug 2024/12/23 16:51:46 poo false
+debug 2024/12/23 16:51:46 poo false
+debug 2024/12/23 16:51:46 poo false
+debug 2024/12/23 16:51:58 poo false
+debug 2024/12/23 16:52:01 poo false
+debug 2024/12/23 16:52:02 poo false
+debug 2024/12/23 16:52:02 poo false
+debug 2024/12/23 16:52:02 poo false
+debug 2024/12/23 16:52:02 poo false
+debug 2024/12/23 16:52:03 poo false
+debug 2024/12/23 16:52:03 poo false
+debug 2024/12/23 16:52:03 poo false
+debug 2024/12/23 16:52:03 poo false
+debug 2024/12/23 16:52:03 poo false
+debug 2024/12/23 16:52:03 poo false
+debug 2024/12/23 16:52:04 poo false
+debug 2024/12/23 16:52:04 poo false
+debug 2024/12/23 16:52:04 poo false
+debug 2024/12/23 16:52:04 poo false
+debug 2024/12/23 16:52:04 poo false
+debug 2024/12/23 16:52:04 poo false
+debug 2024/12/23 16:52:04 poo false
+debug 2024/12/23 16:52:05 poo false
+debug 2024/12/23 16:52:05 poo false
+debug 2024/12/23 16:52:05 poo false
+debug 2024/12/23 16:52:05 poo false
+debug 2024/12/23 16:52:05 poo false
+debug 2024/12/23 16:52:05 poo false
+debug 2024/12/23 16:52:05 poo false
+debug 2024/12/23 16:52:06 poo false
+debug 2024/12/23 16:52:06 poo false
+debug 2024/12/23 16:52:06 poo false
+debug 2024/12/23 16:52:06 poo false
+debug 2024/12/23 16:55:06 poo false
+debug 2024/12/23 16:55:06 poo false
+debug 2024/12/23 16:55:07 poo false
+debug 2024/12/23 16:55:07 poo false
+debug 2024/12/23 16:55:07 poo false
+debug 2024/12/23 16:55:07 poo false
+debug 2024/12/23 16:55:07 poo false
+debug 2024/12/23 16:55:07 poo false
+debug 2024/12/23 16:55:09 poo false
+debug 2024/12/23 16:55:09 poo false
+debug 2024/12/23 16:55:14 searchValue: poo
+debug 2024/12/23 16:55:14 poo true
+debug 2024/12/23 16:55:14 poo true
+debug 2024/12/23 16:55:14 poo true
+debug 2024/12/23 16:55:15 poo true
+debug 2024/12/23 16:55:15 about to return Results
+debug 2024/12/23 16:55:15 Search Results: [{Silver Spoon silver-spoon silver-spoon} {Spoon Oba-san spoon-oba-san spoon-oba-san} {Silver Spoon S2 silver-spoon-s2 silver-spoon-s2} {Spoon Oba-san (Dub) spoon-oba-san-dub spoon-oba-san-dub} {Gegege no Kitarou (1996) gegege-no-kitarou-1996 gegege-no-kitarou-1996} {Gegege no Kitarou (1985) gegege-no-kitarou-1985 gegege-no-kitarou-1985} {Gegege no Kitarou (2007) gegege-no-kitarou-2007 gegege-no-kitarou-2007} {Binbou Shimai Monogatari binbou-shimai-monogatari binbou-shimai-monogatari} {Gegege no Kitarou: Daikaijuu gegege-no-kitarou-daikaijuu gegege-no-kitarou-daikaijuu} {Gegege no Kitarou: Nippon Bakuretsu!! gegege-no-kitarou-nippon-bakuretsu gegege-no-kitarou-nippon-bakuretsu} {Wan Wan Celepoo Soreyuke! Tetsunoshin wan-wan-celepoo-soreyuke-tetsunoshin wan-wan-celepoo-soreyuke-tetsunoshin} {The Poor Boy's Counterattack On The Underworld the-poor-boys-counterattack-on-the-underworld the-poor-boys-counterattack-on-the-underworld}]
+debug 2024/12/23 16:55:15 Current Anime List when NewResults is called
+debug 2024/12/23 16:55:15 poo false
+debug 2024/12/23 16:55:17 poo false
+debug 2024/12/23 16:55:18 poo false
+debug 2024/12/23 16:55:18 poo false
+debug 2024/12/23 16:55:18 poo false
+debug 2024/12/23 16:55:18 poo false
+debug 2024/12/23 16:55:19 poo false
+debug 2024/12/23 16:55:19 poo false
+debug 2024/12/23 16:55:19 poo false
+debug 2024/12/23 16:55:19 poo false
+debug 2024/12/23 16:55:19 poo false
+debug 2024/12/23 16:55:19 poo false
+debug 2024/12/23 16:55:20 poo false
+debug 2024/12/23 16:55:20 poo false
+debug 2024/12/23 16:55:20 poo false
+debug 2024/12/23 16:55:20 poo false
+debug 2024/12/23 16:55:21 poo false
+debug 2024/12/23 16:55:21 poo false
+debug 2024/12/23 16:58:13 searchValue: Demon Slayer
+debug 2024/12/23 16:58:13 poo true
+debug 2024/12/23 16:58:13 poo true
+debug 2024/12/23 16:58:13 poo true
+debug 2024/12/23 16:58:13 poo true
+debug 2024/12/23 16:58:13 about to return Results
+debug 2024/12/23 16:58:13 Search Results: [{Kimetsu no Yaiba kimetsu-no-yaiba kimetsu-no-yaiba} {Kimetsu no Yaiba (Dub) kimetsu-no-yaiba-dub kimetsu-no-yaiba-dub} {Kimetsu no Yaiba: Yuukaku-hen kimetsu-no-yaiba-yuukaku-hen kimetsu-no-yaiba-yuukaku-hen} {Kimetsu no Yaiba: Asakusa Hen kimetsu-no-yaiba-asakusa-hen kimetsu-no-yaiba-asakusa-hen} {Kimetsu no Yaiba: Mugen Ressha-hen kimetsu-no-yaiba-mugen-ressha-hen kimetsu-no-yaiba-mugen-ressha-hen} {Kimetsu no Yaiba: Yuukaku-hen (Dub) kimetsu-no-yaiba-yuukaku-hen-dub kimetsu-no-yaiba-yuukaku-hen-dub} {Kimetsu no Yaiba: Hashira Geiko-hen kimetsu-no-yaiba-hashira-geiko-hen kimetsu-no-yaiba-hashira-geiko-hen} {Kimetsu no Yaiba: Tsuzumi Yashiki Hen kimetsu-no-yaiba-tsuzumi-yashiki-hen kimetsu-no-yaiba-tsuzumi-yashiki-hen} {Kimetsu no Yaiba: Katanakaji no Sato-hen kimetsu-no-yaiba-katanakaji-no-sato-hen kimetsu-no-yaiba-katanakaji-no-sato-hen} {Kimetsu no Yaiba: Mugen Ressha-hen (Dub) kimetsu-no-yaiba-mugen-ressha-hen-dub kimetsu-no-yaiba-mugen-ressha-hen-dub} {Mortal Bone Demon Slayer: Heavenly Abyss mortal-bone-demon-slayer-heavenly-abyss mortal-bone-demon-slayer-heavenly-abyss} {Kimetsu no Yaiba Movie: Mugen Ressha-hen kimetsu-no-yaiba-movie-mugen-ressha-hen kimetsu-no-yaiba-movie-mugen-ressha-hen} {Kimetsu no Yaiba: Hashira Geiko-hen (Dub) kimetsu-no-yaiba-hashira-geiko-hen-dub kimetsu-no-yaiba-hashira-geiko-hen-dub} {Kimetsu no Yaiba Recap Movie 1: Siblings Bond kimetsu-no-yaiba-recap-movie-1-siblings-bond kimetsu-no-yaiba-recap-movie-1-siblings-bond} {Kimetsu no Yaiba: Katanakaji no Sato-hen (Dub) demon-slayer-kimetsu-no-yaiba-swordsmith-village-arc-dub demon-slayer-kimetsu-no-yaiba-swordsmith-village-arc-dub} {Kimetsu no Yaiba Movie: Mugen Ressha-hen (Dub) kimetsu-no-yaiba-movie-mugen-ressha-hen-dub kimetsu-no-yaiba-movie-mugen-ressha-hen-dub} {Kimetsu No Yaiba Recap Movie 2: Mt. Natagumo Arc kimetsu-no-yaiba-recap-movie-2-mt-natagumo-arc kimetsu-no-yaiba-recap-movie-2-mt-natagumo-arc} {Kimetsu no Yaiba Recap Movie 3: The Hashira Meeting Arc kimetsu-no-yaiba-recap-movie-3-the-hashira-meeting-arc kimetsu-no-yaiba-recap-movie-3-the-hashira-meeting-arc}]
+debug 2024/12/23 16:58:13 Current Anime List when NewResults is called
+debug 2024/12/23 16:58:13 poo false
+debug 2024/12/23 16:58:14 poo false
+debug 2024/12/23 16:58:15 poo false
+debug 2024/12/23 16:58:16 poo false
+debug 2024/12/23 16:58:16 poo false
+debug 2024/12/23 16:58:16 poo false
+debug 2024/12/23 16:58:16 poo false
+debug 2024/12/23 16:58:16 poo false
+debug 2024/12/23 16:58:16 poo false
+debug 2024/12/23 16:58:16 poo false
+debug 2024/12/23 16:58:16 poo false
+debug 2024/12/23 16:58:16 poo false
+debug 2024/12/23 16:58:16 poo false
+debug 2024/12/23 16:58:16 poo false
+debug 2024/12/23 16:58:17 poo false
+debug 2024/12/23 16:58:17 poo false
+debug 2024/12/23 16:58:17 poo false
+debug 2024/12/23 16:58:17 poo false
+debug 2024/12/23 16:58:17 poo false
+debug 2024/12/23 16:58:17 poo false
+debug 2024/12/23 16:58:17 poo false
+debug 2024/12/23 16:58:17 poo false
+debug 2024/12/23 16:58:17 poo false
+debug 2024/12/23 16:58:18 poo false
+debug 2024/12/23 16:58:18 poo false
+debug 2024/12/23 16:58:18 poo false
+debug 2024/12/23 16:58:18 poo false
+debug 2024/12/23 16:58:18 poo false
+debug 2024/12/23 16:58:19 poo false
+debug 2024/12/23 16:58:19 poo false
+debug 2024/12/23 16:58:19 poo false
+debug 2024/12/23 16:58:19 poo false
+debug 2024/12/23 16:58:19 poo false
+debug 2024/12/23 16:58:19 poo false
+debug 2024/12/23 16:58:19 poo false
+debug 2024/12/23 16:58:19 poo false
+debug 2024/12/23 16:58:20 poo false
+debug 2024/12/23 16:58:20 poo false
+debug 2024/12/23 16:58:24 poo false
+debug 2024/12/23 16:58:32 poo false
+debug 2024/12/23 16:58:32 poo false
+debug 2024/12/23 16:58:33 poo false
+debug 2024/12/23 16:58:33 poo false
+debug 2024/12/23 16:58:33 poo false
+debug 2024/12/23 16:58:34 poo false
+debug 2024/12/23 16:58:37 Anime Id from main kimetsu-no-yaiba-yuukaku-hen
+debug 2024/12/23 16:58:37 EPISODE ID: kimetsu-no-yaiba-yuukaku-hen
+debug 2024/12/23 16:58:38 about to return Results
+debug 2024/12/23 16:58:38 about to return Results
+debug 2024/12/23 16:59:10 searchValue: Naruto
+debug 2024/12/23 16:59:10 poo true
+debug 2024/12/23 16:59:10 poo true
+debug 2024/12/23 16:59:10 poo true
+debug 2024/12/23 16:59:10 poo true
+debug 2024/12/23 16:59:11 about to return Results
+debug 2024/12/23 16:59:11 Search Results: [{Naruto naruto naruto} {Naruto (Dub) naruto-dub naruto-dub} {Naruto Shippuden naruto-shippuden naruto-shippuden} {Naruto Shippuden (Dub) naruto-shippuuden-dub naruto-shippuuden-dub} {Boruto: Naruto the Movie boruto-naruto-the-movie boruto-naruto-the-movie} {Naruto Shippuden Movie 1 naruto-shippuuden-movie-1 naruto-shippuuden-movie-1} {Boruto: Naruto the Movie (Dub) boruto-naruto-the-movie-dub boruto-naruto-the-movie-dub} {Boruto: Naruto Next Generations boruto-naruto-next-generations boruto-naruto-next-generations} {Naruto: Shippuuden Movie 1 (Dub) naruto-shippuuden-movie-1-dub naruto-shippuuden-movie-1-dub} {Naruto Shippuden Movie 5 Special naruto-shippuden-movie-5-special naruto-shippuden-movie-5-special} {The Last: Naruto the Movie (Dub) the-last-naruto-the-movie-dub the-last-naruto-the-movie-dub} {Naruto Shippuden Movie 2: Kizuna naruto-shippuuden-movie-2-kizuna naruto-shippuuden-movie-2-kizuna} {Naruto Shippuden Movie 7: The Last naruto-shippuuden-movie-7-the-last naruto-shippuuden-movie-7-the-last} {Naruto Shippuden: Sunny Side Battle naruto-shippuuden-sunny-side-battle naruto-shippuuden-sunny-side-battle} {Boruto: Naruto Next Generations (Dub) boruto-naruto-next-generations-dub boruto-naruto-next-generations-dub} {Naruto Shippuden Movie 5: Blood Prison naruto-shippuuden-movie-5-blood-prison naruto-shippuuden-movie-5-blood-prison} {Naruto Shippuden Movie 6: Road to Ninja naruto-shippuuden-movie-6-road-to-ninja naruto-shippuuden-movie-6-road-to-ninja} {Naruto Shippuden Movie 4: The Lost Tower naruto-shippuuden-movie-4-the-lost-tower naruto-shippuuden-movie-4-the-lost-tower} {Naruto: Shippuuden Movie 2 - Kizuna (Dub) naruto-shippuuden-movie-2-kizuna-dub naruto-shippuuden-movie-2-kizuna-dub} {Naruto: Akaki Yotsuba no Clover wo Sagase naruto-akaki-yotsuba-no-clover-wo-sagase naruto-akaki-yotsuba-no-clover-wo-sagase}]
+debug 2024/12/23 16:59:11 Current Anime List when NewResults is called
+debug 2024/12/23 16:59:11 poo false
+debug 2024/12/23 16:59:12 poo false
+debug 2024/12/23 16:59:12 poo false
+debug 2024/12/23 16:59:14 poo false
+debug 2024/12/23 16:59:14 poo false
+debug 2024/12/23 16:59:23 searchValue: Naruto
+debug 2024/12/23 16:59:23 poo true
+debug 2024/12/23 16:59:23 poo true
+debug 2024/12/23 16:59:23 poo true
+debug 2024/12/23 16:59:23 poo true
+debug 2024/12/23 16:59:23 about to return Results
+debug 2024/12/23 16:59:23 Search Results: [{Naruto naruto naruto} {Naruto (Dub) naruto-dub naruto-dub} {Naruto Shippuden naruto-shippuden naruto-shippuden} {Naruto Shippuden (Dub) naruto-shippuuden-dub naruto-shippuuden-dub} {Boruto: Naruto the Movie boruto-naruto-the-movie boruto-naruto-the-movie} {Naruto Shippuden Movie 1 naruto-shippuuden-movie-1 naruto-shippuuden-movie-1} {Boruto: Naruto the Movie (Dub) boruto-naruto-the-movie-dub boruto-naruto-the-movie-dub} {Boruto: Naruto Next Generations boruto-naruto-next-generations boruto-naruto-next-generations} {Naruto: Shippuuden Movie 1 (Dub) naruto-shippuuden-movie-1-dub naruto-shippuuden-movie-1-dub} {Naruto Shippuden Movie 5 Special naruto-shippuden-movie-5-special naruto-shippuden-movie-5-special} {The Last: Naruto the Movie (Dub) the-last-naruto-the-movie-dub the-last-naruto-the-movie-dub} {Naruto Shippuden Movie 2: Kizuna naruto-shippuuden-movie-2-kizuna naruto-shippuuden-movie-2-kizuna} {Naruto Shippuden Movie 7: The Last naruto-shippuuden-movie-7-the-last naruto-shippuuden-movie-7-the-last} {Naruto Shippuden: Sunny Side Battle naruto-shippuuden-sunny-side-battle naruto-shippuuden-sunny-side-battle} {Boruto: Naruto Next Generations (Dub) boruto-naruto-next-generations-dub boruto-naruto-next-generations-dub} {Naruto Shippuden Movie 5: Blood Prison naruto-shippuuden-movie-5-blood-prison naruto-shippuuden-movie-5-blood-prison} {Naruto Shippuden Movie 6: Road to Ninja naruto-shippuuden-movie-6-road-to-ninja naruto-shippuuden-movie-6-road-to-ninja} {Naruto Shippuden Movie 4: The Lost Tower naruto-shippuuden-movie-4-the-lost-tower naruto-shippuuden-movie-4-the-lost-tower} {Naruto: Shippuuden Movie 2 - Kizuna (Dub) naruto-shippuuden-movie-2-kizuna-dub naruto-shippuuden-movie-2-kizuna-dub} {Naruto: Akaki Yotsuba no Clover wo Sagase naruto-akaki-yotsuba-no-clover-wo-sagase naruto-akaki-yotsuba-no-clover-wo-sagase}]
+debug 2024/12/23 16:59:23 Current Anime List when NewResults is called
+debug 2024/12/23 16:59:23 poo false
+debug 2024/12/23 16:59:24 poo false
+debug 2024/12/23 16:59:24 poo false
+debug 2024/12/23 16:59:24 Anime Id from main naruto
+debug 2024/12/23 16:59:24 EPISODE ID: naruto
+debug 2024/12/23 16:59:25 about to return Results
+debug 2024/12/23 16:59:26 about to return Results
+debug 2024/12/23 17:46:31 searchValue: tokyo ghoul
+debug 2024/12/23 17:46:31 poo true
+debug 2024/12/23 17:46:31 poo true
+debug 2024/12/23 17:46:31 poo true
+debug 2024/12/23 17:46:31 poo true
+debug 2024/12/23 17:46:32 about to return Results
+debug 2024/12/23 17:46:32 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 17:46:32 Current Anime List when NewResults is called
+debug 2024/12/23 17:46:32 poo false
+debug 2024/12/23 17:46:32 poo false
+debug 2024/12/23 17:46:34 poo false
+debug 2024/12/23 17:46:34 poo false
+debug 2024/12/23 17:46:34 poo false
+debug 2024/12/23 17:46:35 poo false
+debug 2024/12/23 17:46:35 Anime Id from main tokyo-ghoulre
+debug 2024/12/23 17:46:35 EPISODE ID: tokyo-ghoulre
+debug 2024/12/23 17:46:37 about to return Results
+debug 2024/12/23 17:46:37 about to return Results
+debug 2024/12/23 17:46:38 EPISODE ID: tokyo-ghoulre-episode-1
+debug 2024/12/23 17:47:14 searchValue: Tokyo Ghoul
+debug 2024/12/23 17:47:14 poo true
+debug 2024/12/23 17:47:14 poo true
+debug 2024/12/23 17:47:14 poo true
+debug 2024/12/23 17:47:14 poo true
+debug 2024/12/23 17:47:15 about to return Results
+debug 2024/12/23 17:47:15 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 17:47:15 Current Anime List when NewResults is called
+debug 2024/12/23 17:47:15 poo false
+debug 2024/12/23 17:47:16 Anime Id from main tokyo-ghoul
+debug 2024/12/23 17:47:16 EPISODE ID: tokyo-ghoul
+debug 2024/12/23 17:47:17 about to return Results
+debug 2024/12/23 17:47:17 about to return Results
+debug 2024/12/23 17:47:18 EPISODE ID: tokyo-ghoul-episode-1
+debug 2024/12/23 17:49:31 searchValue: Tokyo Ghoul
+debug 2024/12/23 17:49:31 poo true
+debug 2024/12/23 17:49:31 poo true
+debug 2024/12/23 17:49:31 poo true
+debug 2024/12/23 17:49:31 poo true
+debug 2024/12/23 17:49:32 about to return Results
+debug 2024/12/23 17:49:32 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 17:49:32 Current Anime List when NewResults is called
+debug 2024/12/23 17:49:32 poo false
+debug 2024/12/23 17:49:33 Anime Id from main tokyo-ghoul
+debug 2024/12/23 17:49:33 EPISODE ID: tokyo-ghoul
+debug 2024/12/23 17:49:34 about to return Results
+debug 2024/12/23 17:49:34 about to return Results
+debug 2024/12/23 17:49:35 EPISODE ID: tokyo-ghoul-episode-1
+debug 2024/12/23 17:51:40 searchValue: Tokyo Ghoul
+debug 2024/12/23 17:51:40 poo true
+debug 2024/12/23 17:51:40 poo true
+debug 2024/12/23 17:51:40 poo true
+debug 2024/12/23 17:51:41 poo true
+debug 2024/12/23 17:51:41 about to return Results
+debug 2024/12/23 17:51:41 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 17:51:41 Current Anime List when NewResults is called
+debug 2024/12/23 17:51:41 poo false
+debug 2024/12/23 17:51:42 poo false
+debug 2024/12/23 17:51:43 Anime Id from main tokyo-ghoulre
+debug 2024/12/23 17:51:43 EPISODE ID: tokyo-ghoulre
+debug 2024/12/23 17:51:44 about to return Results
+debug 2024/12/23 17:51:44 about to return Results
+debug 2024/12/23 17:51:46 EPISODE ID: tokyo-ghoulre-episode-8
+debug 2024/12/23 17:53:08 searchValue: Chainsaw Man
+debug 2024/12/23 17:53:08 poo true
+debug 2024/12/23 17:53:08 poo true
+debug 2024/12/23 17:53:08 poo true
+debug 2024/12/23 17:53:09 poo true
+debug 2024/12/23 17:53:09 about to return Results
+debug 2024/12/23 17:53:09 Search Results: [{Chainsaw Man chainsaw-man chainsaw-man} {Chainsaw Man (Dub) chainsaw-man-dub chainsaw-man-dub}]
+debug 2024/12/23 17:53:09 Current Anime List when NewResults is called
+debug 2024/12/23 17:53:09 poo false
+debug 2024/12/23 17:53:12 Anime Id from main chainsaw-man
+debug 2024/12/23 17:53:12 EPISODE ID: chainsaw-man
+debug 2024/12/23 17:53:14 about to return Results
+debug 2024/12/23 17:53:14 about to return Results
+debug 2024/12/23 17:53:18 EPISODE ID: chainsaw-man-episode-7
+debug 2024/12/23 17:55:06 searchValue: Chainsaw Man
+debug 2024/12/23 17:55:06 poo true
+debug 2024/12/23 17:55:06 poo true
+debug 2024/12/23 17:55:06 poo true
+debug 2024/12/23 17:55:06 poo true
+debug 2024/12/23 17:55:07 about to return Results
+debug 2024/12/23 17:55:07 Search Results: [{Chainsaw Man chainsaw-man chainsaw-man} {Chainsaw Man (Dub) chainsaw-man-dub chainsaw-man-dub}]
+debug 2024/12/23 17:55:07 Current Anime List when NewResults is called
+debug 2024/12/23 17:55:07 poo false
+debug 2024/12/23 17:55:08 Anime Id from main chainsaw-man
+debug 2024/12/23 17:55:08 EPISODE ID: chainsaw-man
+debug 2024/12/23 17:55:09 about to return Results
+debug 2024/12/23 17:55:09 about to return Results
+debug 2024/12/23 17:55:10 EPISODE ID: chainsaw-man-episode-3
+debug 2024/12/23 18:01:03 searchValue: Tokyo Ghoul
+debug 2024/12/23 18:01:03 poo true
+debug 2024/12/23 18:01:03 poo true
+debug 2024/12/23 18:01:03 poo true
+debug 2024/12/23 18:01:04 poo true
+debug 2024/12/23 18:01:04 about to return Results
+debug 2024/12/23 18:01:04 Search Results: [{Tokyo Ghoul tokyo-ghoul tokyo-ghoul} {Tokyo Ghoul:re tokyo-ghoulre tokyo-ghoulre} {Tokyo Ghoul (Dub) tokyo-ghoul-dub tokyo-ghoul-dub} {Tokyo Ghoul: "Jack" tokyo-ghoul-jack- tokyo-ghoul-jack-} {Tokyo Ghoul:re (Dub) tokyo-ghoulre-dub tokyo-ghoulre-dub} {Tokyo Ghoul: "Pinto" tokyo-ghoul-pinto- tokyo-ghoul-pinto-} {Tokyo Ghoul 2nd Season tokyo-ghoul-a tokyo-ghoul-a} {Tokyo Ghoul Root A (Dub) tokyo-ghoul-root-a-dub tokyo-ghoul-root-a-dub} {Tokyo Ghoul: "Jack" (Dub) tokyo-ghoul-jack-dub tokyo-ghoul-jack-dub} {Tokyo Ghoul:re 2nd Season tokyo-ghoulre-2nd-season tokyo-ghoulre-2nd-season} {Tokyo Ghoul: "Pinto" (Dub) tokyo-ghoul-pinto-dub tokyo-ghoul-pinto-dub} {Tokyo Ghoul:re 2nd Season (Dub) tokyo-ghoulre-2nd-season-dub tokyo-ghoulre-2nd-season-dub}]
+debug 2024/12/23 18:01:04 Current Anime List when NewResults is called
+debug 2024/12/23 18:01:04 poo false
+debug 2024/12/23 18:01:05 poo false
+debug 2024/12/23 18:01:05 poo false
+debug 2024/12/23 18:01:06 Anime Id from main tokyo-ghoul-dub
+debug 2024/12/23 18:01:06 EPISODE ID: tokyo-ghoul-dub
+debug 2024/12/23 18:01:07 about to return Results
+debug 2024/12/23 18:01:07 about to return Results
+debug 2024/12/23 18:01:08 EPISODE ID: tokyo-ghoul-dub-episode-3
