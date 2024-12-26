@@ -12,7 +12,6 @@ func FetchJsonData(fullUrl string) ([]byte, error) {
 	if err != nil {
 		fmt.Errorf("Failed to make the request: %v", err)
 	}
-	//defer resp.Body.Close()
 
 	if resp.StatusCode != http.StatusOK {
 		fmt.Errorf("Request failed with status: %s", resp.Status)

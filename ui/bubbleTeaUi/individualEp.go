@@ -130,7 +130,6 @@ func GetLinkCmd(epId string) (tea.Cmd) {
 func (m indivEpModel) playLink(id string) (indivEpModel, tea.Cmd) {
 	m.loading = true
 	m.epID = id
-	log.Printf("EPISODE ID: %s", id)
 	return m, GetLinkCmd(id)
 }
 

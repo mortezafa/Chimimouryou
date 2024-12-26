@@ -2347,3 +2347,18 @@ debug 2024/12/23 21:55:21 about to return Results
 debug 2024/12/23 21:55:21 about to return Results
 debug 2024/12/23 21:55:23 EPISODE ID: shingeki-no-kyojin-episode-1
 debug 2024/12/23 21:55:48 EPISODE ID: shingeki-no-kyojin-episode-6
+debug 2024/12/25 20:27:17 searchValue: demon slayer
+debug 2024/12/25 20:27:17 poo true
+debug 2024/12/25 20:27:17 poo true
+debug 2024/12/25 20:27:17 poo true
+debug 2024/12/25 20:27:17 about to return Results
+debug 2024/12/25 20:27:17 Search Results: []
+debug 2024/12/25 20:27:17 Current Anime List when NewResults is called
+debug 2024/12/25 20:27:17 poo false
+debug 2024/12/25 20:27:17 poo false
+debug 2024/12/25 20:27:19 poo false
+debug 2024/12/25 20:27:19 poo false
+debug 2024/12/25 21:00:59 Anime Id from main kimetsu-no-yaiba
+debug 2024/12/25 21:00:59 EPISODE ID: kimetsu-no-yaiba
+debug 2024/12/25 21:01:00 about to return Results
+debug 2024/12/25 21:01:00 about to return Results

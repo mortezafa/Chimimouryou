@@ -4,7 +4,6 @@ import (
 	"github.com/charmbracelet/bubbles/textinput"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"log"
 )
 
 type Styles struct {
@@ -59,7 +58,6 @@ func (m searchModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			return m, tea.Quit
 		case "enter":
 			m.output = m.searchField.Value()
-			log.Printf("searchValue: %s", m.output)
 			return m, nil
 		case "left":
 			m.searchField.SetValue("")

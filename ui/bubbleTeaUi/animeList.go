@@ -18,7 +18,6 @@ import (
 	"github.com/charmbracelet/bubbles/list"
 	tea "github.com/charmbracelet/bubbletea"
 	"github.com/charmbracelet/lipgloss"
-	"log"
 )
 
 var docStyle = lipgloss.NewStyle().Margin(1, 0)
@@ -43,6 +42,12 @@ type (
 	errMsg struct{ err error }
 )
 
+func (a animes) Title() string       { return a.title }
+func (a animes) Description() string { return "" }
+func (a animes) FilterValue() string { return a.title }
+
+func (e errMsg) Error() string { return e.err.Error() }
+
 func NewResultsModel() *animeModel {
 	items := []list.Item{}
 
@@ -61,7 +66,59 @@ func NewResultsModel() *animeModel {
 	return &m
 }
 
-func (e errMsg) Error() string { return e.err.Error() }
+func (m animeModel) Init() tea.Cmd {
+	m.loading = true
+	return fetchSearchResults(m.searchTerm)
+}
+
+func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
+	switch msg := msg.(type) {
+	case tea.KeyMsg:
+		if msg.String() == "ctrl+c" {
+			return m, tea.Quit
+		}
+		if msg.String() == "enter" {
+			m.animeID = m.animeList.SelectedItem().(animes).id
+			m.selectedAnimeName = m.animeList.SelectedItem().(animes).title
+			return m, nil
+		}
+	case tea.WindowSizeMsg:
+		h, v := docStyle.GetFrameSize()
+		m.animeList.SetSize(msg.Width-h, msg.Height-v)
+
+	case result:
+		m.loading = false
+
+		searchResults := []animes(msg)
+		items := []list.Item{}
+
+		for _, anime := range searchResults {
+			items = append(items, animes{
+				title: anime.title,
+				id:    anime.id,
+				image: anime.id,
+			})
+		}
+
+		m.animeList.SetItems(items)
+		return m, nil
+	case errMsg:
+		m.err = msg
+	}
+
+	var cmd tea.Cmd
+	m.animeList, cmd = m.animeList.Update(msg)
+	return m, cmd
+}
+
+func (m animeModel) View() string {
+
+	if m.loading {
+		return docStyle.Render("Fetching Search Results...")
+	}
+
+	return docStyle.Render(m.animeList.View())
+}
 
 func fetchSearchResults(name string) tea.Cmd {
 	return func() tea.Msg {
@@ -69,7 +126,6 @@ func fetchSearchResults(name string) tea.Cmd {
 		if err != nil {
 			return errMsg{err}
 		}
-		log.Printf("about to return Results")
 		return result(animeList)
 	}
 }
@@ -106,67 +162,3 @@ func (m animeModel) SetSearchTerm(term string) (animeModel, tea.Cmd) {
 	m.animeList.Title = fmt.Sprintf("Search Results for %s", m.searchTerm)
 	return m, fetchSearchResults(term)
 }
-
-
-
-func (a animes) Title() string       { return a.title }
-func (a animes) Description() string { return "" }
-func (a animes) FilterValue() string { return a.title }
-
-func (m animeModel) Init() tea.Cmd {
-	m.loading = true
-	return fetchSearchResults(m.searchTerm)
-}
-
-func (m animeModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
-	switch msg := msg.(type) {
-	case tea.KeyMsg:
-		if msg.String() == "ctrl+c" {
-			return m, tea.Quit
-		}
-		if msg.String() == "enter" {
-			m.animeID = m.animeList.SelectedItem().(animes).id
-			m.selectedAnimeName = m.animeList.SelectedItem().(animes).title
-			return m, nil
-		}
-	case tea.WindowSizeMsg:
-		h, v := docStyle.GetFrameSize()
-		m.animeList.SetSize(msg.Width-h, msg.Height-v)
-
-	case result:
-		m.loading = false
-
-		searchResults := []animes(msg)
-		items := []list.Item{}
-
-		for _, anime := range searchResults {
-			items = append(items, animes{
-				title: anime.title,
-				id:    anime.id,
-				image: anime.id,
-			})
-		}
-
-		log.Printf("Search Results: %s", items)
-		m.animeList.SetItems(items)
-		log.Println("Current Anime List when NewResults is called")
-		return m, nil
-	case errMsg:
-		m.err = msg
-	}
-
-	var cmd tea.Cmd
-	m.animeList, cmd = m.animeList.Update(msg)
-	return m, cmd
-}
-
-func (m animeModel) View() string {
-
-	log.Printf("poo %v", m.loading)
-	if m.loading {
-		return docStyle.Render("Fetching Search Results...")
-	}
-
-	return docStyle.Render(m.animeList.View())
-}
-
