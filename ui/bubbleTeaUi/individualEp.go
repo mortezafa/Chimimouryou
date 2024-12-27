@@ -134,7 +134,7 @@ func (m indivEpModel) playLink(id string) (indivEpModel, tea.Cmd) {
 }
 
 func getEpisodeLinks(epID string) ([]episodeLinks, error) {
-	url := fmt.Sprintf("http://localhost:3000/anime/gogoanime/watch/%s", epID)
+	url := fmt.Sprintf("%sanime/gogoanime/watch/%s", utils.BaseApiUrl, epID)
 	body, err := utils.FetchJsonData(url)
 	
 	var links JsonsStrcuts.AnimeStreams	

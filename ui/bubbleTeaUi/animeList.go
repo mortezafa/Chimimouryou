@@ -132,7 +132,7 @@ func fetchSearchResults(name string) tea.Cmd {
 
 func searchAnime(name string) ([]animes, error) {
 	var fullUrl string
-	fullUrl = fmt.Sprintf("http://localhost:3000/anime/gogoanime/%s", name)
+	fullUrl = fmt.Sprintf("%sanime/gogoanime/%s", utils.BaseApiUrl, name)
 
 	resp, err := utils.FetchJsonData(fullUrl)
 

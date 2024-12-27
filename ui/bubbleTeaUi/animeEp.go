@@ -116,7 +116,7 @@ func getEpisodeResults(Id string) tea.Cmd {
 
 
 func getEpisodeList(aniID string) ([]episodes, error) {
-	epUrl := fmt.Sprintf("http://localhost:3000/anime/gogoanime/info/%s", aniID)
+	epUrl := fmt.Sprintf("%sanime/gogoanime/info/%s", utils.BaseApiUrl, aniID)
 	body, err := utils.FetchJsonData(epUrl)
 	
 	var epStruct JsonsStrcuts.AnimeInfo
