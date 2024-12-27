@@ -11,8 +11,10 @@ import (
 // searchCmd represents the search command
 var searchCmd = &cobra.Command{
 	Use:   "search",
-	Short: "`chimi search` is used to search up any anime",
-	Long:  `...`,
+	Short: "Used to search up any anime",
+	Long:  `
+	Chimimouryou is quite simple as of now. The only key you need to know is how to quit Chimimouryou: simply press Ctrl + C at any time.
+	`,
 	Run: func(cmd *cobra.Command, args []string) {
 		bubbleTeaUi.Main()
 	},

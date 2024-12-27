@@ -12,8 +12,8 @@ import (
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
 	Use:   "chimi",
-	Short: "This is the short description",
-	Long:  `MEOW MEOW MEOW LOL`,
+	Short: "A Cli tool to watch Anime in your Terminal",
+	Long:  `Chimimouryou is a CLI tool written in Go with the BubbleTea framework to make watching anime easy`,
 	// Uncomment the following line if your bare application
 	// has an action associated with it:
 	// Run: func(cmd *cobra.Command, args []string) { },
