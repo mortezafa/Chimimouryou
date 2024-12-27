@@ -106,7 +106,7 @@ func (m indivEpModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 
 func (m indivEpModel) View() string  {
 	if m.err != nil {
-		return fmt.Sprintf("Error: %v\nPress 'b' to go back.", m.err)
+		return fmt.Sprintf("Error: %v\nPress 'ctrl + b' to go back.", m.err)
 	}
 	if m.loading {
 		return "Fetching Video..."
@@ -114,7 +114,7 @@ func (m indivEpModel) View() string  {
 	if m.mpvRan {
 		return "Playing Video in MPV..."
 	}
-	return "Press 'b' to go back. (Not currently playing anything)"
+	return "Press 'ctrl + b' to go back. (Not currently playing anything)"
 }
 
 

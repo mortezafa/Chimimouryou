@@ -74,7 +74,7 @@ func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.episodeModel, cmd = m.episodeModel.(episodeModel).SetAnimeId(animeId, animeName)
 			cmds = append(cmds, cmd, tea.WindowSize())
 		}
-		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "b" || keyMsg.String() == "left" {
+		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "ctrl + b" || keyMsg.String() == "left" {
 			m.state = searchAPage
 			m.searchModel, cmd = m.searchModel.Update(msg)
 		}
@@ -87,13 +87,13 @@ func (m MainModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.linkModel, cmd = m.linkModel.(indivEpModel).playLink(epId)
 			cmds = append(cmds, cmd, tea.WindowSize())
 		}
-		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "b" || keyMsg.String() == "left" {
+		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "ctrl + b" || keyMsg.String() == "left" {
 			m.state = animePage
 			m.episodeModel, cmd = m.episodeModel.Update(msg)
 		}
 	case link:
 		m.linkModel, cmd = m.linkModel.Update(msg)
-		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "b" || keyMsg.String() == "left" {
+		if keyMsg, ok := msg.(tea.KeyMsg); ok && keyMsg.String() == "ctrl + b" || keyMsg.String() == "left" {
 			m.state = episodePage
 			m.linkModel, cmd = m.linkModel.Update(msg)
 		}
