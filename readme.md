@@ -11,7 +11,7 @@ Chimimouryou is a terminal-based application that lets users search for anime, b
 using the MPV media player. Built with Go and the Bubble Tea framework, Chimimouryou provides a simple and lightweight
 solution for anime enthusiasts. 
 
-Chimimouryou is in its very early stages. I know there aren't many features yet, but I'll be adding as many as I can in
+Chimimouryou is in its **very** early stages. I know there aren't many features yet, but I'll be adding as many as I can in
 the coming months as my time permits. :)
 
 ## Key Features
