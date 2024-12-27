@@ -61,13 +61,17 @@ func (m indivEpModel) Update(msg tea.Msg) (tea.Model, tea.Cmd) {
 			m.mpvRan = true
 			m.loading = false
 			links := []episodeLinks(msg)
-
+			
 			var url string
 			for _, link := range links {
 				if link.quality == "1080p" && link.isM3u8 {
 					url = link.link
 					break
-				} else {
+				}
+			}
+
+			if url == "" {
+				for _, link := range links {
 					if link.quality == "720p" && link.isM3u8 {
 						url = link.link
 						break
