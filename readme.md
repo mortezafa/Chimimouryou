@@ -1,11 +1,5 @@
 <h1 style="text-align: center;">Chimimouryou (魑魅魍魎): A Terminal Anime Streaming CLI</h1>
 
-<div style="text-align: center;">
-  <video width="640" height="360" controls>
-    <source src="./demoVids/demo1-1.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
 
 Chimimouryou is a terminal-based application that lets users search for anime, browse episodes, and stream them directly
 using the MPV media player. Built with Go and the Bubble Tea framework, Chimimouryou provides a simple and lightweight
