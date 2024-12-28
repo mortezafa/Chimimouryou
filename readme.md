@@ -52,7 +52,6 @@ Ensure you have [Homebrew](https://brew.sh/) installed. If not, you can install 
    chimi search <anime>
    ```
 
----
 
 ### **Notes**
 - To update Chimimouryou in the future, simply run:
