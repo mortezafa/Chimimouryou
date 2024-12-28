@@ -25,7 +25,45 @@ using MacOS. Follow the download instructions [here](https://brew.sh/).
 
 ---
 
-### **1. Local Installation**
+### **1. Installation with Homebrew**
+
+#### **Prerequisite**
+Ensure you have [Homebrew](https://brew.sh/) installed. If not, you can install it with:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+#### **Steps**
+1. **Add the Chimimouryou Tap**:
+   Tap the custom repository to make the formula available:
+   ```bash
+   brew tap mortezafa/chimi-homebrew-tap https://github.com/mortezafa/chimi-homebrew-tap
+   ```
+
+2. **Install Chimimouryou**:
+   Use Homebrew to install the CLI:
+   ```bash
+   brew install chimimouryou
+   ```
+
+3. **Run the CLI**:
+   Once installed, you can start using the CLI:
+   ```bash
+   chimi search <anime>
+   ```
+
+---
+
+### **Notes**
+- To update Chimimouryou in the future, simply run:
+  ```bash
+  brew update && brew upgrade chimimouryou
+  ```
+
+---
+
+
+### **2. Local Installation**
 
 #### Prerequisites
 
@@ -67,7 +105,7 @@ using MacOS. Follow the download instructions [here](https://brew.sh/).
 
 ---
 
-### **2. Docker Installation**
+### **3. Docker Installation**
 
 Coming Soon...
 
